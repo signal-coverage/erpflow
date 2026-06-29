@@ -1,0 +1,206 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Organization {
+  id             String             @id @default(cuid())
+  name           String
+  legalName      String?
+  taxId          String?
+  email          String
+  phone          String?
+  logoUrl        String?
+  timezone       String
+  currency       String
+  plan           Plan               @default(FREE)
+  status         OrganizationStatus @default(ACTIVE)
+  enabledPlugins String[]
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+  createdBy      String
+  updatedBy      String
+  users          UserProfile[]
+  patients       Patient[]
+  professionals  Professional[]
+  appointments   Appointment[]
+
+  @@map("organizations")
+}
+
+model UserProfile {
+  id             String       @id
+  organizationId String
+  roleId         SystemRole
+  displayName    String
+  email          String
+  photoURL       String?
+  phone          String?
+  status         UserStatus   @default(ACTIVE)
+  lastLogin      DateTime?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  createdBy      String
+  updatedBy      String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+
+  @@map("user_profiles")
+}
+
+enum Plan {
+  FREE
+  STARTER
+  PROFESSIONAL
+  ENTERPRISE
+}
+
+enum OrganizationStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+enum SystemRole {
+  admin
+  staff
+  professional
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  PENDING
+}
+
+enum DocumentType {
+  DNI
+  PASSPORT
+  CUIL
+  OTHER
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+  PREFER_NOT_TO_SAY
+}
+
+enum PatientStatus {
+  ACTIVE
+  INACTIVE
+  ARCHIVED
+}
+
+model Patient {
+  id               String        @id @default(cuid())
+  organizationId   String
+  documentType     DocumentType
+  documentNumber   String
+  firstName        String
+  lastName         String
+  birthDate        DateTime?
+  gender           Gender?
+  phone            String?
+  email            String?
+  address          Json?
+  insurance        Json?
+  emergencyContact Json?
+  tags             String[]
+  notes            String?
+  status           PatientStatus @default(ACTIVE)
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  createdBy        String?
+  updatedBy        String?
+  deletedAt        DateTime?
+  deletedBy        String?
+
+  organization Organization  @relation(fields: [organizationId], references: [id])
+  appointments Appointment[]
+
+  @@unique([organizationId, documentType, documentNumber])
+  @@index([organizationId, status])
+  @@index([organizationId, createdAt])
+  @@map("patients")
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+  NO_SHOW
+}
+
+model Professional {
+  id             String         @id @default(cuid())
+  organizationId String
+  organization   Organization   @relation(fields: [organizationId], references: [id])
+  displayName    String
+  specialties    String[]
+  license        String?
+  phone          String?
+  email          String?
+  calendarColor  String?
+  userId         String?
+  active         Boolean        @default(true)
+  workingHours   WorkingHours[]
+  appointments   Appointment[]
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  createdBy      String?
+  updatedBy      String?
+  deletedAt      DateTime?
+  deletedBy      String?
+
+  @@index([organizationId, active])
+}
+
+model WorkingHours {
+  id             String       @id @default(cuid())
+  organizationId String
+  professionalId String
+  professional   Professional @relation(fields: [professionalId], references: [id])
+  dayOfWeek      Int
+  startTime      String
+  endTime        String
+  active         Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+
+  @@index([professionalId, dayOfWeek])
+}
+
+model Appointment {
+  id               String            @id @default(cuid())
+  organizationId   String
+  organization     Organization      @relation(fields: [organizationId], references: [id])
+  patientId        String
+  patient          Patient           @relation(fields: [patientId], references: [id])
+  patientName      String
+  professionalId   String?
+  professional     Professional?     @relation(fields: [professionalId], references: [id])
+  professionalName String?
+  pluginId         String?
+  status           AppointmentStatus @default(SCHEDULED)
+  scheduledStart   DateTime
+  scheduledEnd     DateTime
+  reason           String?
+  location         String?
+  notes            String?
+  cancelledAt      DateTime?
+  cancelledBy      String?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  createdBy        String?
+  updatedBy        String?
+
+  @@index([organizationId, scheduledStart])
+  @@index([organizationId, patientId])
+  @@index([organizationId, professionalId])
+  @@index([organizationId, status])
+}

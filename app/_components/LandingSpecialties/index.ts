@@ -1,0 +1,1 @@
+export { LandingSpecialties } from "./LandingSpecialties";
