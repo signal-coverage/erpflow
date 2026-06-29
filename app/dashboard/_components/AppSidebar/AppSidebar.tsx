@@ -24,11 +24,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ChevronUp } from "lucide-react";
 import { navItems, footerItems } from "./consts";
+import { usePlugins } from "@/providers/plugin-provider";
 
 export function AppSidebar() {
   const pathname = usePathname();
   const router = useRouter();
   const { user, signOut } = useAuth();
+  const { pluginNavItems } = usePlugins();
+  const allNavItems = [...navItems, ...pluginNavItems];
 
   const email = user?.email ?? "";
   const initials = email.split("@")[0]?.[0]?.toUpperCase() ?? "U";
@@ -60,7 +63,7 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navItems.map((item) => (
+              {allNavItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton asChild isActive={pathname === item.href}>
                     <Link href={item.href}>

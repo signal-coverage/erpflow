@@ -35,14 +35,17 @@ export function OrganizationProvider({
     }
     setLoading(true);
     try {
-      const profile = await getUserProfile(user.id);
-      if (!profile) {
+      const profileResult = await getUserProfile(user.id);
+      if (!profileResult.success || !profileResult.data) {
         setNeedsOnboarding(true);
         return;
       }
+      const profile = profileResult.data;
       setUserProfile(profile);
-      const org = await getOrganization(profile.organizationId);
-      setOrganization(org);
+      const orgResult = await getOrganization(profile.organizationId);
+      if (orgResult.success) {
+        setOrganization(orgResult.data);
+      }
       setNeedsOnboarding(false);
     } catch (err) {
       console.error("[OrganizationProvider] Failed to load:", err);

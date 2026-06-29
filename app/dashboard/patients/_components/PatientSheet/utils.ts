@@ -1,14 +1,12 @@
-import type { PatientSheetProps } from "./types";
-import type { FormValues } from "./types";
+import type { PatientSheetProps, PatientFormValues } from "./types";
 
 export function getInitialValues(
   patient?: PatientSheetProps["patient"],
-): FormValues {
+): Partial<PatientFormValues> {
   if (!patient) {
     return {
       firstName: "",
       lastName: "",
-      documentType: "",
       documentNumber: "",
       gender: "",
       birthDate: "",
@@ -20,9 +18,9 @@ export function getInitialValues(
   return {
     firstName: patient.firstName,
     lastName: patient.lastName,
-    documentType: patient.documentType,
+    documentType: patient.documentType as PatientFormValues["documentType"],
     documentNumber: patient.documentNumber,
-    gender: patient.gender ?? "",
+    gender: (patient.gender as PatientFormValues["gender"]) ?? "",
     birthDate: patient.birthDate
       ? patient.birthDate.toISOString().split("T")[0]
       : "",

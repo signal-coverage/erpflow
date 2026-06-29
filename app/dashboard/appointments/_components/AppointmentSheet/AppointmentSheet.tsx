@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm, useWatch, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
 import { toast } from "sonner";
 import {
   Sheet,
@@ -16,6 +18,20 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { cn } from "@/lib/utils";
 import {
   createAppointment,
   updateAppointment,
@@ -58,6 +74,8 @@ export function AppointmentSheet({
   const isEdit = !!appointment;
   const [patients, setPatients] = useState<Patient[]>([]);
   const [professionals, setProfessionals] = useState<Professional[]>([]);
+  const [startCalendarOpen, setStartCalendarOpen] = useState(false);
+  const [endCalendarOpen, setEndCalendarOpen] = useState(false);
 
   const form = useForm<AppointmentFormValues>({
     resolver: zodResolver(appointmentFormSchema),
@@ -168,35 +186,138 @@ export function AppointmentSheet({
             </select>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="scheduledStart">Start *</Label>
-              <Input
-                id="scheduledStart"
-                type="datetime-local"
-                {...form.register("scheduledStart")}
-                aria-invalid={!!form.formState.errors.scheduledStart}
-              />
-              {form.formState.errors.scheduledStart && (
-                <p className="text-xs text-destructive">
-                  {form.formState.errors.scheduledStart.message}
-                </p>
-              )}
-            </div>
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="scheduledEnd">End *</Label>
-              <Input
-                id="scheduledEnd"
-                type="datetime-local"
-                {...form.register("scheduledEnd")}
-                aria-invalid={!!form.formState.errors.scheduledEnd}
-              />
-              {form.formState.errors.scheduledEnd && (
-                <p className="text-xs text-destructive">
-                  {form.formState.errors.scheduledEnd.message}
-                </p>
-              )}
-            </div>
+          <div className="flex flex-col gap-1">
+            <Label>Start *</Label>
+            <Controller
+              control={form.control}
+              name="scheduledStart"
+              render={({ field }) => {
+                const datePart = field.value?.split("T")[0] ?? "";
+                const timePart =
+                  field.value?.split("T")[1]?.slice(0, 5) ?? "09:00";
+                const selected = datePart
+                  ? new Date(datePart + "T12:00:00")
+                  : undefined;
+                return (
+                  <div className="flex gap-2">
+                    <Popover
+                      open={startCalendarOpen}
+                      onOpenChange={setStartCalendarOpen}
+                    >
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "flex-1 justify-start text-left font-normal",
+                            !datePart && "text-muted-foreground",
+                          )}
+                        >
+                          <CalendarIcon className="mr-2 size-4" />
+                          {datePart ? format(selected!, "PPP") : "Pick a date"}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={selected}
+                          onSelect={(date) => {
+                            if (!date) return;
+                            field.onChange(
+                              format(date, "yyyy-MM-dd") + "T" + timePart,
+                            );
+                            setStartCalendarOpen(false);
+                          }}
+                          captionLayout="dropdown"
+                          defaultMonth={selected}
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <TimePicker
+                      value={timePart}
+                      onChange={(t) =>
+                        field.onChange(
+                          (datePart || format(new Date(), "yyyy-MM-dd")) +
+                            "T" +
+                            t,
+                        )
+                      }
+                    />
+                  </div>
+                );
+              }}
+            />
+            {form.formState.errors.scheduledStart && (
+              <p className="text-xs text-destructive">
+                {form.formState.errors.scheduledStart.message}
+              </p>
+            )}
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <Label>End *</Label>
+            <Controller
+              control={form.control}
+              name="scheduledEnd"
+              render={({ field }) => {
+                const datePart = field.value?.split("T")[0] ?? "";
+                const timePart =
+                  field.value?.split("T")[1]?.slice(0, 5) ?? "10:00";
+                const selected = datePart
+                  ? new Date(datePart + "T12:00:00")
+                  : undefined;
+                return (
+                  <div className="flex gap-2">
+                    <Popover
+                      open={endCalendarOpen}
+                      onOpenChange={setEndCalendarOpen}
+                    >
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "flex-1 justify-start text-left font-normal",
+                            !datePart && "text-muted-foreground",
+                          )}
+                        >
+                          <CalendarIcon className="mr-2 size-4" />
+                          {datePart ? format(selected!, "PPP") : "Pick a date"}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={selected}
+                          onSelect={(date) => {
+                            if (!date) return;
+                            field.onChange(
+                              format(date, "yyyy-MM-dd") + "T" + timePart,
+                            );
+                            setEndCalendarOpen(false);
+                          }}
+                          captionLayout="dropdown"
+                          defaultMonth={selected}
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <TimePicker
+                      value={timePart}
+                      onChange={(t) =>
+                        field.onChange(
+                          (datePart || format(new Date(), "yyyy-MM-dd")) +
+                            "T" +
+                            t,
+                        )
+                      }
+                    />
+                  </div>
+                );
+              }}
+            />
+            {form.formState.errors.scheduledEnd && (
+              <p className="text-xs text-destructive">
+                {form.formState.errors.scheduledEnd.message}
+              </p>
+            )}
           </div>
 
           {showPastWarning && (
@@ -246,5 +367,61 @@ export function AppointmentSheet({
         </form>
       </SheetContent>
     </Sheet>
+  );
+}
+
+const HOURS = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, "0"));
+const MINUTES = [
+  "00",
+  "05",
+  "10",
+  "15",
+  "20",
+  "25",
+  "30",
+  "35",
+  "40",
+  "45",
+  "50",
+  "55",
+];
+
+function TimePicker({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const [h = "09", m = "00"] = value.split(":");
+
+  return (
+    <div className="flex items-center gap-1">
+      <Select value={h} onValueChange={(v) => onChange(v + ":" + m)}>
+        <SelectTrigger className="h-9 w-16 text-sm">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          {HOURS.map((hour) => (
+            <SelectItem key={hour} value={hour}>
+              {hour}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+      <span className="text-sm font-medium text-muted-foreground">:</span>
+      <Select value={m} onValueChange={(v) => onChange(h + ":" + v)}>
+        <SelectTrigger className="h-9 w-16 text-sm">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          {MINUTES.map((min) => (
+            <SelectItem key={min} value={min}>
+              {min}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </div>
   );
 }

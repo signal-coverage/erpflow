@@ -42,3 +42,11 @@ export async function updateUserProfile(
     data: { ...data, updatedBy },
   });
 }
+
+export async function listUsersByOrg(orgId: string): Promise<UserProfile[]> {
+  const rows = await prisma.userProfile.findMany({
+    where: { organizationId: orgId },
+    orderBy: { displayName: "asc" },
+  });
+  return rows.map(toUserProfile);
+}

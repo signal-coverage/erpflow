@@ -13,12 +13,15 @@ export function AppointmentList({
 }: AppointmentListProps) {
   if (isLoading) {
     return (
-      <div className="flex flex-col gap-2">
+      <div className="divide-y divide-border">
         {Array.from({ length: 3 }).map((_, i) => (
-          <div
-            key={i}
-            className="h-24 rounded-lg border bg-muted animate-pulse"
-          />
+          <div key={i} className="flex gap-4 py-3">
+            <div className="w-24 h-4 rounded bg-muted animate-pulse shrink-0" />
+            <div className="flex-1 flex flex-col gap-2">
+              <div className="h-4 rounded bg-muted animate-pulse w-40" />
+              <div className="h-3 rounded bg-muted animate-pulse w-28" />
+            </div>
+          </div>
         ))}
       </div>
     );
@@ -27,13 +30,13 @@ export function AppointmentList({
   if (appointments.length === 0) {
     return (
       <div className="flex items-center justify-center h-32 text-sm text-muted-foreground">
-        No appointments for this date.
+        No appointments for today.
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="divide-y divide-border">
       {appointments.map((appointment) => (
         <AppointmentCard
           key={appointment.id}

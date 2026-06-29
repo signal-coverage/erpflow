@@ -28,6 +28,8 @@ model Organization {
   patients       Patient[]
   professionals  Professional[]
   appointments   Appointment[]
+  invoices       Invoice[]
+  payments       Payment[]
 
   @@map("organizations")
 }
@@ -122,6 +124,7 @@ model Patient {
 
   organization Organization  @relation(fields: [organizationId], references: [id])
   appointments Appointment[]
+  invoices     Invoice[]
 
   @@unique([organizationId, documentType, documentNumber])
   @@index([organizationId, status])
@@ -199,8 +202,126 @@ model Appointment {
   createdBy        String?
   updatedBy        String?
 
+  invoices Invoice[]
+
   @@index([organizationId, scheduledStart])
   @@index([organizationId, patientId])
   @@index([organizationId, professionalId])
   @@index([organizationId, status])
+}
+
+enum InvoiceStatus {
+  DRAFT
+  ISSUED
+  PAID
+  VOID
+}
+
+enum PaymentMethod {
+  CASH
+  CARD
+  TRANSFER
+  DIGITAL
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+model Invoice {
+  id             String        @id @default(cuid())
+  organizationId String
+  organization   Organization  @relation(fields: [organizationId], references: [id])
+  patientId      String
+  patient        Patient       @relation(fields: [patientId], references: [id])
+  patientName    String
+  appointmentId  String?
+  appointment    Appointment?  @relation(fields: [appointmentId], references: [id])
+  number         Int
+  status         InvoiceStatus @default(DRAFT)
+  currency       String
+  items          Json
+  subtotal       Float
+  tax            Float         @default(0)
+  discount       Float         @default(0)
+  total          Float
+  notes          String?
+  issuedAt       DateTime?
+  paidAt         DateTime?
+  voidedAt       DateTime?
+  voidedBy       String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  createdBy      String?
+  updatedBy      String?
+  payments       Payment[]
+
+  @@unique([organizationId, number])
+  @@index([organizationId, status])
+  @@index([organizationId, patientId])
+  @@index([organizationId, createdAt])
+}
+
+model Payment {
+  id             String        @id @default(cuid())
+  organizationId String
+  organization   Organization  @relation(fields: [organizationId], references: [id])
+  invoiceId      String
+  invoice        Invoice       @relation(fields: [invoiceId], references: [id])
+  method         PaymentMethod
+  amount         Float
+  currency       String
+  status         PaymentStatus @default(COMPLETED)
+  reference      String?
+  paidAt         DateTime      @default(now())
+  createdAt      DateTime      @default(now())
+  createdBy      String?
+}
+
+enum NotificationType {
+  APPOINTMENT_REMINDER
+  APPOINTMENT_CANCELLED
+  INVOICE_PAID
+  PATIENT_BIRTHDAY
+}
+
+enum NotificationStatus {
+  PENDING
+  SENT
+  FAILED
+}
+
+model Notification {
+  id             String             @id @default(cuid())
+  organizationId String
+  type           NotificationType
+  recipientId    String
+  recipientEmail String
+  title          String
+  message        String
+  status         NotificationStatus @default(PENDING)
+  failureReason  String?
+  sentAt         DateTime?
+  createdAt      DateTime           @default(now())
+
+  @@index([organizationId, status])
+  @@index([organizationId, type, recipientId])
+  @@map("notifications")
+}
+
+model PluginRegistry {
+  id             String   @id @default(cuid())
+  organizationId String
+  pluginId       String
+  version        String
+  enabled        Boolean  @default(true)
+  installedAt    DateTime @default(now())
+  installedBy    String
+  config         Json     @default("{}")
+
+  @@unique([organizationId, pluginId])
+  @@index([organizationId])
 }

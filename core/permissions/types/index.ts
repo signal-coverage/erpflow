@@ -1,6 +1,6 @@
 import type { SystemRole } from "@/core/users/types";
 
-export type PermissionKey =
+export type CorePermissionKey =
   | "patients.read"
   | "patients.create"
   | "patients.update"
@@ -22,7 +22,11 @@ export type PermissionKey =
   | "users.delete"
   | "organization.read"
   | "organization.update"
-  | "settings.manage";
+  | "settings.manage"
+  | "notifications.read";
+
+export type PluginPermissionKey = string & {};
+export type PermissionKey = CorePermissionKey | PluginPermissionKey;
 
 export interface RolePermissions {
   roleId: SystemRole;

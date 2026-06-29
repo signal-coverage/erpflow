@@ -1,6 +1,8 @@
 import { prisma } from "@/infrastructure/db/client";
 import { Prisma } from "@/lib/generated/prisma/client";
 import { startOfDay, endOfDay } from "date-fns";
+import { render } from "@react-email/render";
+import * as React from "react";
 import type {
   Appointment,
   AppointmentFilters,
@@ -9,6 +11,8 @@ import type {
   CreateAppointmentInput,
   UpdateAppointmentInput,
 } from "@/core/appointments/schemas/appointment.schema";
+import { dispatch } from "@/lib/notifications/dispatcher";
+import { AppointmentCancelled } from "@/lib/email/templates/AppointmentCancelled";
 
 type AppointmentRow = NonNullable<
   Awaited<ReturnType<typeof prisma.appointment.findUnique>>
@@ -194,6 +198,39 @@ export async function cancelAppointment(
       updatedBy: cancelledBy,
     },
   });
+
+  // Dispatch cancellation notification — non-throwing, does not affect return value
+  try {
+    const patient = await prisma.patient.findUnique({
+      where: { id: row.patientId },
+      select: { email: true, firstName: true, lastName: true },
+    });
+
+    const patientName = patient
+      ? `${patient.firstName} ${patient.lastName}`.trim()
+      : row.patientName;
+
+    const html = await render(
+      React.createElement(AppointmentCancelled, {
+        patientName,
+        scheduledStart: row.scheduledStart,
+        professionalName: row.professionalName ?? undefined,
+      }),
+    );
+
+    await dispatch({
+      type: "APPOINTMENT_CANCELLED",
+      organizationId: orgId,
+      recipientId: row.patientId,
+      recipientEmail: patient?.email ?? null,
+      recipientName: patientName,
+      subject: "Your appointment has been cancelled",
+      html,
+    });
+  } catch {
+    // notification failure must not affect appointment cancellation
+  }
+
   return toAppointment(row);
 }
 

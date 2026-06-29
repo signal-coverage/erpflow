@@ -2,36 +2,13 @@
 
 import { SignUp } from "@clerk/nextjs";
 import { motion } from "framer-motion";
+import { clerkAppearance } from "@/app/(auth)/_components/clerk-appearance";
 
-const appearance = {
-  variables: {
-    colorPrimary: "#7C5CFF",
-    colorText: "#111827",
-    colorTextSecondary: "#6B7280",
-    colorBackground: "#ffffff",
-    colorInputBackground: "#ffffff",
-    colorInputText: "#111827",
-    colorTextOnPrimaryBackground: "#ffffff",
-    borderRadius: "10px",
-    fontFamily: "inherit",
-    fontSize: "14px",
-    spacingUnit: "16px",
-  },
+const signUpAppearance = {
+  ...clerkAppearance,
   elements: {
-    rootBox: "w-full",
-    cardBox: "!shadow-none !border-0 w-full",
+    ...clerkAppearance.elements,
     card: "!pt-3",
-    headerTitle: "!hidden",
-    headerSubtitle: "!hidden",
-    formButtonPrimary: "!rounded-[10px] !h-12 !font-medium !shadow-sm",
-    socialButtonsBlockButton:
-      "!rounded-[10px] !h-12 !border-gray-200 hover:!bg-gray-50",
-    formFieldInput: "!rounded-[10px] !h-12 !border-gray-200",
-    formFieldLabel: "!text-sm !font-medium !text-gray-700",
-    dividerLine: "!bg-gray-200",
-    footer: "!bg-white",
-    footerPagesLink: "!text-[#7C5CFF]",
-    identityPreviewEditButton: "!text-[#7C5CFF]",
   },
 };
 
@@ -57,7 +34,7 @@ export default function SignupPage() {
         routing="hash"
         signInUrl="/login"
         fallbackRedirectUrl="/dashboard"
-        appearance={appearance}
+        appearance={signUpAppearance}
       />
     </motion.div>
   );
