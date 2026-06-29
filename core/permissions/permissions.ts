@@ -1,0 +1,48 @@
+import type { SystemRole } from "@/core/users/types";
+import type { PermissionKey } from "@/core/permissions/types";
+
+export const ROLE_PERMISSIONS: Record<SystemRole, PermissionKey[]> = {
+  admin: [
+    "patients.read",
+    "patients.create",
+    "patients.update",
+    "patients.delete",
+    "professionals.read",
+    "professionals.create",
+    "professionals.update",
+    "professionals.delete",
+    "appointments.read",
+    "appointments.create",
+    "appointments.update",
+    "appointments.cancel",
+    "billing.read",
+    "billing.create",
+    "billing.update",
+    "users.read",
+    "users.invite",
+    "users.update",
+    "users.delete",
+    "organization.read",
+    "organization.update",
+    "settings.manage",
+  ],
+  staff: [
+    "patients.read",
+    "patients.create",
+    "patients.update",
+    "appointments.read",
+    "appointments.create",
+    "appointments.update",
+    "appointments.cancel",
+    "billing.read",
+    "professionals.read",
+    "users.read",
+    "organization.read",
+  ],
+  professional: [
+    "patients.read",
+    "appointments.read",
+    "appointments.update",
+    "organization.read",
+  ],
+};

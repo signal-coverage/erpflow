@@ -1,0 +1,2987 @@
+[     125ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[     261ms] [LOG] [Fast Refresh] done in 242ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[     299ms] [LOG] %c Console Ninja extension is connected to Next.js browser, background: rgb(30,30,30); color: rgb(255,213,92) see https://tinyurl.com/2vt8jxzw for more info. @ :0
+[     304ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[     320ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[     483ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[     500ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[     546ms] [WARNING] Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[     945ms] [WARNING] Clerk: Structural CSS detected that may break on updates.
+
+Found:
+  - CSS "[data-clerk-auth] .cl-formButtonPrimary"
+  - CSS "[data-clerk-auth] .cl-formButtonPrimary:hover"
+  - CSS "[data-clerk-auth] .cl-footer"
+  - CSS "[data-clerk-auth] .cl-formFieldInput:focus"
+
+These selectors depend on the internal DOM structure of Clerk's components, which may change when Clerk deploys component updates.
+To prevent breaking changes, install @clerk/ui and pass it to ClerkProvider:
+
+  import { ui } from '@clerk/ui'
+  <ClerkProvider ui={ui}>
+
+Learn more: https://clerk.com/docs/reference/components/versioning
+(code=structural_css_pin_clerk_ui) @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[    1013ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3000/signup:0
+[    5276ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[    5307ms] [LOG] [Fast Refresh] done in 135ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   20650ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   20724ms] [LOG] [Fast Refresh] done in 135ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   20837ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   20879ms] [LOG] [Fast Refresh] done in 146ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   24338ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   24360ms] [LOG] [Fast Refresh] done in 130ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   24395ms] [LOG] %c Console Ninja extension is connected to Next.js browser, background: rgb(30,30,30); color: rgb(255,213,92) see https://tinyurl.com/2vt8jxzw for more info. @ :0
+[   24400ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   24417ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   24649ms] [WARNING] Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   25035ms] [WARNING] Clerk: Structural CSS detected that may break on updates.
+
+Found:
+  - CSS "[data-clerk-auth] .cl-formButtonPrimary"
+  - CSS "[data-clerk-auth] .cl-formButtonPrimary:hover"
+  - CSS "[data-clerk-auth] .cl-footer"
+  - CSS "[data-clerk-auth] .cl-formFieldInput:focus"
+
+These selectors depend on the internal DOM structure of Clerk's components, which may change when Clerk deploys component updates.
+To prevent breaking changes, install @clerk/ui and pass it to ClerkProvider:
+
+  import { ui } from '@clerk/ui'
+  <ClerkProvider ui={ui}>
+
+Learn more: https://clerk.com/docs/reference/components/versioning
+(code=structural_css_pin_clerk_ui) @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   25112ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3000/signup:0
+[   60891ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   61058ms] [LOG] [Fast Refresh] done in 220ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   61169ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   61188ms] [LOG] [Fast Refresh] done in 123ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   61291ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   61334ms] [LOG] [Fast Refresh] done in 146ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   64951ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   64988ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   79421ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   79518ms] [LOG] [Fast Refresh] done in 200ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   79688ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   79709ms] [LOG] [Fast Refresh] done in 130ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   79811ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   79841ms] [LOG] [Fast Refresh] done in 132ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   82253ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   82304ms] [LOG] [Fast Refresh] done in 156ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   87645ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   87741ms] [LOG] [Fast Refresh] done in 195ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   87919ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   87996ms] [LOG] [Fast Refresh] done in 181ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   90908ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   91094ms] [LOG] [Fast Refresh] done in 290ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   91254ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   91471ms] [LOG] [Fast Refresh] done in 318ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   97112ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   97783ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   97784ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   97873ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   97874ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   97960ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/signup?_rsc=eBCcquDgCX9lp-Bd:0
+[   97988ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[   98045ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/signup?_rsc=eBCcquDgCX9lp-Bd:0
+[   98065ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/signup:0
+[   98134ms] [LOG] %c Console Ninja extension is connected to Next.js browser, background: rgb(30,30,30); color: rgb(255,213,92) see https://tinyurl.com/2vt8jxzw for more info. @ :0
+[   98159ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_0kla17-._.js:15305
+[   98223ms] Error: ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./app/(auth)/login/page.tsx:8:1)
+    at Object.getCompilationErrors (file://C:\Users\Nico\Desktop\erpflow\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file://C:\Users\Nico\Desktop\erpflow\node_modules\next\dist\server\lib\dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file://C:\Users\Nico\Desktop\erpflow\node_modules\next\dist\server\dev\next-dev-server.js:720:42)
+    at DevServer.findPageComponents (file://C:\Users\Nico\Desktop\erpflow\node_modules\next\dist\server\dev\next-dev-server.js:690:43)
+    at async DevServer.renderErrorToResponseImpl (file://C:\Users\Nico\Desktop\erpflow\node_modules\next\dist\server\base-server.js:1753:26)
+[   98223ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1236
+[   98227ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98228ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98248ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98248ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98333ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98333ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98335ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1236
+[   98455ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1236
+[   98456ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98457ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98549ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98549ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98627ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98627ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98722ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98722ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98816ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98816ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98909ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   98910ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99005ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99005ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99099ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99099ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99191ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99192ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99285ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99285ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99378ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99378ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99470ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99470ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99564ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99564ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99659ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99659ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99752ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99752ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99847ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99847ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99942ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[   99942ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100036ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100036ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100129ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100129ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100223ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100223ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100317ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100317ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100410ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100410ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100501ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100502ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100596ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100596ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100690ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100690ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100785ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100785ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100879ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100880ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100973ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  100973ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101067ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101067ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101161ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101161ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101256ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101256ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101334ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101334ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101412ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101412ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101491ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101491ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101583ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101583ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101662ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101662ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101740ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101740ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101834ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101834ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101913ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  101913ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102005ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102006ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102098ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102098ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102193ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102193ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102286ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102286ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102380ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102380ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102473ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102473ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102567ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102567ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102659ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102659ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102737ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102737ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102830ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102831ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102909ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  102909ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103002ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103002ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103096ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103096ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103189ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103189ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103267ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103267ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103361ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103361ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103439ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103439ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103532ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103532ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103609ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103610ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103704ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-client] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103704ms] [ERROR] ./app/(auth)/login/page.tsx:8:1
+Export auth doesn't exist in target module
+   6 | import { z } from "zod";
+   7 | import { toast } from "sonner";
+>  8 | import { auth } from "@/infrastructure/firebase/client";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import {
+  10 |   Card,
+  11 |   CardContent,
+
+The export auth was not found in module [project]/infrastructure/firebase/client.ts [app-ssr] (ecmascript).
+Did you mean to import storage?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/(auth)/login/page.tsx [Client Component Browser]
+    ./app/(auth)/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/(auth)/login/page.tsx [Client Component SSR]
+    ./app/(auth)/login/page.tsx [Server Component] @ :0
+[  103805ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1236
+[  104277ms] [LOG] [Fast Refresh] done in 569ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1236
+[  104436ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1236
+[  104436ms] [LOG] [Fast Refresh] done in 101ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1236
+[  104654ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1236
+[  104973ms] [LOG] [Fast Refresh] done in 431ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1236
+[  105144ms] [LOG] %c Console Ninja extension is connected to Next.js browser, background: rgb(30,30,30); color: rgb(255,213,92) see https://tinyurl.com/2vt8jxzw for more info. @ :0
+[  105151ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  105180ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  105314ms] [WARNING] Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  105735ms] [WARNING] Clerk: Structural CSS detected that may break on updates.
+
+Found:
+  - CSS "[data-clerk-auth] .cl-formButtonPrimary"
+  - CSS "[data-clerk-auth] .cl-formButtonPrimary:hover"
+  - CSS "[data-clerk-auth] .cl-footer"
+  - CSS "[data-clerk-auth] .cl-formFieldInput:focus"
+
+These selectors depend on the internal DOM structure of Clerk's components, which may change when Clerk deploys component updates.
+To prevent breaking changes, install @clerk/ui and pass it to ClerkProvider:
+
+  import { ui } from '@clerk/ui'
+  <ClerkProvider ui={ui}>
+
+Learn more: https://clerk.com/docs/reference/components/versioning
+(code=structural_css_pin_clerk_ui) @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  105801ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "username"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3000/signup:0
+[  105858ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  105858ms] [LOG] [Fast Refresh] done in 106ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  114284ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  114382ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  114492ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  114520ms] [LOG] [Fast Refresh] done in 132ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  114621ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  114661ms] [LOG] [Fast Refresh] done in 141ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  117111ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  117173ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  122352ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  122440ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  122555ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  122695ms] [LOG] [Fast Refresh] done in 247ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  127268ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  127354ms] [LOG] [Fast Refresh] done in 139ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  127590ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  127634ms] [LOG] [Fast Refresh] done in 148ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  251490ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  251732ms] [LOG] [Fast Refresh] done in 267ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  251840ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  251934ms] [LOG] [Fast Refresh] done in 198ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  259435ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  259518ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  259638ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  259803ms] [LOG] [Fast Refresh] done in 276ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487

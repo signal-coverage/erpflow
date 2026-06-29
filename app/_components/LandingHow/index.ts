@@ -1,0 +1,1 @@
+export { LandingInnovation } from "./LandingHow";

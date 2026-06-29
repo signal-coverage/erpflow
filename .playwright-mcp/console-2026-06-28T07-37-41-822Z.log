@@ -1,0 +1,1324 @@
+[    2117ms] [LOG] %c Console Ninja extension is connected to Next.js browser, background: rgb(30,30,30); color: rgb(255,213,92) see https://tinyurl.com/2vt8jxzw for more info. @ :0
+[    2145ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[    2224ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[    2305ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/favicon.ico:0
+[    2491ms] [WARNING] Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[    3204ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3000/login:0
+[  336179ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  336332ms] [LOG] [Fast Refresh] done in 252ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  341818ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  341927ms] [LOG] [Fast Refresh] done in 198ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  342059ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  342082ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  348828ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  348900ms] [LOG] [Fast Refresh] done in 174ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  349038ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  349049ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  361916ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  362128ms] [LOG] [Fast Refresh] done in 302ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  362215ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:3000/login:0
+[  362233ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  362259ms] [LOG] [Fast Refresh] done in 128ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  368584ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  368654ms] [LOG] [Fast Refresh] done in 139ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  382968ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2487
+[  383776ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  383872ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  383965ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384045ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384120ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384197ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384275ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384353ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384432ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384511ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384589ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384666ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384745ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384823ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384902ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  384980ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385058ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385135ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385213ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385291ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385369ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385446ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385525ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385603ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385681ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385758ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385836ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385913ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  385991ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386068ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386146ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386226ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386304ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386382ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386445ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386523ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386602ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386680ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386743ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386821ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386899ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  386962ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  387041ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  387119ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  387182ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  387259ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  387338ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  387416ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  387493ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
+[  387569ms] [ERROR] ./app/globals.css:12618:22
+Parsing CSS source code failed
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Unexpected token Delim('!')
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:12618:22
+  12616 |   padding-right: 0.875rem !important;
+  12617 | }
+> 12618 | .cl-formFieldInput.\\!rounded-xl:focus {
+        |                      ^
+  12619 |   outline: none !important;
+  12620 |   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.12) !important;
+  12621 | }
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ :0
