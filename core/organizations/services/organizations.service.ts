@@ -7,6 +7,10 @@ function toOrganization(
   if (!row) throw new Error("Organization not found");
   return {
     ...row,
+    legalName: row.legalName ?? undefined,
+    taxId: row.taxId ?? undefined,
+    phone: row.phone ?? undefined,
+    logoUrl: row.logoUrl ?? undefined,
     plan: row.plan as Organization["plan"],
     status: row.status as Organization["status"],
   };
