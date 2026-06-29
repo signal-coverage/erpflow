@@ -110,9 +110,7 @@ export function ProfessionalsPage() {
             {total} {total === 1 ? "professional" : "professionals"} total
           </p>
         </div>
-        {canCreate && (
-          <Button onClick={handleNew}>New professional</Button>
-        )}
+        {canCreate && <Button onClick={handleNew}>New professional</Button>}
       </div>
 
       <ProfessionalTable

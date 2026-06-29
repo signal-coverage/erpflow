@@ -25,12 +25,15 @@ import type {
   AppointmentStatus,
 } from "@/core/appointments/types";
 
-type ActionResult<T> = { success: true; data: T } | { success: false; error: string };
+type ActionResult<T> =
+  { success: true; data: T } | { success: false; error: string };
 
 async function resolveProfile() {
   const { userId } = await auth();
   if (!userId) return null;
-  const profile = await prisma.userProfile.findUnique({ where: { id: userId } });
+  const profile = await prisma.userProfile.findUnique({
+    where: { id: userId },
+  });
   return profile ?? null;
 }
 
@@ -152,7 +155,11 @@ export async function cancelAppointment(
     if (!checkPermission(profile.roleId, "appointments.cancel")) {
       return { success: false, error: "Forbidden" };
     }
-    const data = await _cancelAppointment(profile.organizationId, id, profile.id);
+    const data = await _cancelAppointment(
+      profile.organizationId,
+      id,
+      profile.id,
+    );
     return { success: true, data };
   } catch (error) {
     console.error("cancelAppointment error:", error);
@@ -169,7 +176,11 @@ export async function completeAppointment(
     if (!checkPermission(profile.roleId, "appointments.update")) {
       return { success: false, error: "Forbidden" };
     }
-    const data = await _completeAppointment(profile.organizationId, id, profile.id);
+    const data = await _completeAppointment(
+      profile.organizationId,
+      id,
+      profile.id,
+    );
     return { success: true, data };
   } catch (error) {
     console.error("completeAppointment error:", error);
@@ -186,7 +197,11 @@ export async function noShowAppointment(
     if (!checkPermission(profile.roleId, "appointments.update")) {
       return { success: false, error: "Forbidden" };
     }
-    const data = await _noShowAppointment(profile.organizationId, id, profile.id);
+    const data = await _noShowAppointment(
+      profile.organizationId,
+      id,
+      profile.id,
+    );
     return { success: true, data };
   } catch (error) {
     console.error("noShowAppointment error:", error);

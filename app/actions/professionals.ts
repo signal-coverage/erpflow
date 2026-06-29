@@ -29,12 +29,15 @@ import type {
 } from "@/core/professionals/types";
 import { auth } from "@clerk/nextjs/server";
 
-type ActionResult<T> = { success: true; data: T } | { success: false; error: string };
+type ActionResult<T> =
+  { success: true; data: T } | { success: false; error: string };
 
 async function resolveProfile() {
   const { userId } = await auth();
   if (!userId) return null;
-  const profile = await prisma.userProfile.findUnique({ where: { id: userId } });
+  const profile = await prisma.userProfile.findUnique({
+    where: { id: userId },
+  });
   return profile ?? null;
 }
 
@@ -53,7 +56,10 @@ export async function getProfessionals(
     if (!checkPermission(profile.roleId, "professionals.read")) {
       return { success: false, error: "Forbidden" };
     }
-    const data = await _listProfessionals(profile.organizationId, filters ?? {});
+    const data = await _listProfessionals(
+      profile.organizationId,
+      filters ?? {},
+    );
     return { success: true, data };
   } catch (error) {
     console.error("getProfessionals error:", error);

@@ -10,7 +10,10 @@ export const createPatientSchema = z.object({
     .string()
     .min(1, "Birth date is required")
     .refine((date) => !isNaN(Date.parse(date)), "Invalid date")
-    .refine((date) => new Date(date) <= new Date(), "Birth date cannot be in the future"),
+    .refine(
+      (date) => new Date(date) <= new Date(),
+      "Birth date cannot be in the future",
+    ),
   phone: z.string().optional(),
   email: z.string().email("Invalid email format").optional().or(z.literal("")),
   address: z

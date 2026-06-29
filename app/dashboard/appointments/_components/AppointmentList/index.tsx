@@ -15,7 +15,10 @@ export function AppointmentList({
     return (
       <div className="flex flex-col gap-2">
         {Array.from({ length: 3 }).map((_, i) => (
-          <div key={i} className="h-24 rounded-lg border bg-muted animate-pulse" />
+          <div
+            key={i}
+            className="h-24 rounded-lg border bg-muted animate-pulse"
+          />
         ))}
       </div>
     );

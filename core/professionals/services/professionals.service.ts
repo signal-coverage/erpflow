@@ -133,8 +133,12 @@ export async function updateProfessional(
   const row = await prisma.professional.update({
     where: { id, organizationId: orgId },
     data: {
-      ...(input.displayName !== undefined && { displayName: input.displayName }),
-      ...(input.specialties !== undefined && { specialties: input.specialties }),
+      ...(input.displayName !== undefined && {
+        displayName: input.displayName,
+      }),
+      ...(input.specialties !== undefined && {
+        specialties: input.specialties,
+      }),
       ...(input.license !== undefined && { license: input.license ?? null }),
       ...(input.phone !== undefined && { phone: input.phone ?? null }),
       ...(input.email !== undefined && { email: input.email || null }),

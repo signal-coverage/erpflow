@@ -14,14 +14,14 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { usePermission } from "@/core/permissions/hooks/use-permission";
-import {
-  getPatients,
-  deletePatient,
-} from "@/app/actions/patients";
+import { getPatients, deletePatient } from "@/app/actions/patients";
 import { PatientFilters } from "@/app/dashboard/patients/_components/PatientFilters";
 import { PatientTable } from "@/app/dashboard/patients/_components/PatientTable";
 import { PatientSheet } from "@/app/dashboard/patients/_components/PatientSheet";
-import type { Patient, PatientFilters as PatientFiltersType } from "@/core/patients/types";
+import type {
+  Patient,
+  PatientFilters as PatientFiltersType,
+} from "@/core/patients/types";
 
 export function PatientsPage() {
   const { hasPermission } = usePermission();
@@ -36,7 +36,9 @@ export function PatientsPage() {
     pageSize: 20,
   });
   const [sheetOpen, setSheetOpen] = useState(false);
-  const [editingPatient, setEditingPatient] = useState<Patient | undefined>(undefined);
+  const [editingPatient, setEditingPatient] = useState<Patient | undefined>(
+    undefined,
+  );
   const [deleteTargetId, setDeleteTargetId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -115,9 +117,7 @@ export function PatientsPage() {
             {total} {total === 1 ? "patient" : "patients"} total
           </p>
         </div>
-        {canCreate && (
-          <Button onClick={handleNewPatient}>New patient</Button>
-        )}
+        {canCreate && <Button onClick={handleNewPatient}>New patient</Button>}
       </div>
 
       <PatientFilters filters={filters} onFiltersChange={handleFiltersChange} />
@@ -138,7 +138,9 @@ export function PatientsPage() {
 
       <AlertDialog
         open={deleteTargetId !== null}
-        onOpenChange={(open) => { if (!open) setDeleteTargetId(null); }}
+        onOpenChange={(open) => {
+          if (!open) setDeleteTargetId(null);
+        }}
       >
         <AlertDialogContent>
           <AlertDialogHeader>

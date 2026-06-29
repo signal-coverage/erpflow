@@ -119,14 +119,14 @@ export function AppointmentsPage() {
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">Appointments</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">
+            Appointments
+          </h1>
           <p className="text-sm text-muted-foreground mt-0.5">
             {format(selectedDate, "EEEE, MMMM d, yyyy")}
           </p>
         </div>
-        {canCreate && (
-          <Button onClick={handleNew}>New appointment</Button>
-        )}
+        {canCreate && <Button onClick={handleNew}>New appointment</Button>}
       </div>
 
       <div className="flex gap-6">

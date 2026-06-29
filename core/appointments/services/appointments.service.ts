@@ -1,7 +1,10 @@
 import { prisma } from "@/infrastructure/db/client";
 import { Prisma } from "@/lib/generated/prisma/client";
 import { startOfDay, endOfDay } from "date-fns";
-import type { Appointment, AppointmentFilters } from "@/core/appointments/types";
+import type {
+  Appointment,
+  AppointmentFilters,
+} from "@/core/appointments/types";
 import type {
   CreateAppointmentInput,
   UpdateAppointmentInput,
