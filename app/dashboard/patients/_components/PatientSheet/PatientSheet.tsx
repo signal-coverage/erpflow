@@ -20,11 +20,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { createPatient, updatePatient } from "@/app/actions/patients";
 import {
-  createPatient,
-  updatePatient,
-} from "@/app/actions/patients";
-import { createPatientSchema, updatePatientSchema } from "@/core/patients/schemas/patient.schema";
+  createPatientSchema,
+  updatePatientSchema,
+} from "@/core/patients/schemas/patient.schema";
 import type { PatientSheetProps, FormValues } from "./types";
 import { getInitialValues } from "./utils";
 
@@ -62,7 +62,10 @@ export function PatientSheet({
       lastName: form.lastName,
       documentType: form.documentType as "DNI" | "PASSPORT" | "CUIL" | "OTHER",
       documentNumber: form.documentNumber,
-      gender: form.gender as "MALE" | "FEMALE" | "OTHER" | "PREFER_NOT_TO_SAY" | undefined || undefined,
+      gender:
+        (form.gender as
+          "MALE" | "FEMALE" | "OTHER" | "PREFER_NOT_TO_SAY" | undefined) ||
+        undefined,
       birthDate: form.birthDate || undefined,
       phone: form.phone || undefined,
       email: form.email || undefined,
@@ -86,7 +89,9 @@ export function PatientSheet({
     try {
       const result = isEdit
         ? await updatePatient(patient!.id, parsed.data)
-        : await createPatient(parsed.data as Parameters<typeof createPatient>[0]);
+        : await createPatient(
+            parsed.data as Parameters<typeof createPatient>[0],
+          );
 
       if (!result.success) {
         toast.error(result.error);
@@ -150,7 +155,10 @@ export function PatientSheet({
                 value={form.documentType}
                 onValueChange={(v) => updateField("documentType", v)}
               >
-                <SelectTrigger id="documentType" aria-invalid={!!errors.documentType}>
+                <SelectTrigger
+                  id="documentType"
+                  aria-invalid={!!errors.documentType}
+                >
                   <SelectValue placeholder="Select type" />
                 </SelectTrigger>
                 <SelectContent>
@@ -161,7 +169,9 @@ export function PatientSheet({
                 </SelectContent>
               </Select>
               {errors.documentType && (
-                <p className="text-xs text-destructive">{errors.documentType}</p>
+                <p className="text-xs text-destructive">
+                  {errors.documentType}
+                </p>
               )}
             </div>
             <div className="flex flex-col gap-1">
@@ -173,7 +183,9 @@ export function PatientSheet({
                 aria-invalid={!!errors.documentNumber}
               />
               {errors.documentNumber && (
-                <p className="text-xs text-destructive">{errors.documentNumber}</p>
+                <p className="text-xs text-destructive">
+                  {errors.documentNumber}
+                </p>
               )}
             </div>
           </div>
@@ -192,7 +204,9 @@ export function PatientSheet({
                   <SelectItem value="MALE">Male</SelectItem>
                   <SelectItem value="FEMALE">Female</SelectItem>
                   <SelectItem value="OTHER">Other</SelectItem>
-                  <SelectItem value="PREFER_NOT_TO_SAY">Prefer not to say</SelectItem>
+                  <SelectItem value="PREFER_NOT_TO_SAY">
+                    Prefer not to say
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -256,7 +270,11 @@ export function PatientSheet({
               Cancel
             </Button>
             <Button type="submit" disabled={submitting}>
-              {submitting ? "Saving..." : isEdit ? "Save changes" : "Create patient"}
+              {submitting
+                ? "Saving..."
+                : isEdit
+                  ? "Save changes"
+                  : "Create patient"}
             </Button>
           </SheetFooter>
         </form>

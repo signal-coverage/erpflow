@@ -1,6 +1,11 @@
 "use client";
 
-import { PencilIcon, XCircleIcon, CheckCircleIcon, ClockIcon } from "lucide-react";
+import {
+  PencilIcon,
+  XCircleIcon,
+  CheckCircleIcon,
+  ClockIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AppointmentStatusBadge } from "@/app/dashboard/appointments/_components/AppointmentStatusBadge";
 import { usePermission } from "@/core/permissions/hooks/use-permission";
@@ -31,7 +36,10 @@ export function AppointmentCard({
           </p>
         )}
         <p className="text-sm text-muted-foreground">
-          {formatTimeRange(appointment.scheduledStart, appointment.scheduledEnd)}
+          {formatTimeRange(
+            appointment.scheduledStart,
+            appointment.scheduledEnd,
+          )}
         </p>
         {appointment.reason && (
           <p className="text-xs text-muted-foreground truncate">

@@ -36,7 +36,9 @@ export function WorkingHoursSection({
       </div>
 
       {fields.length === 0 && (
-        <p className="text-sm text-muted-foreground">No working hours defined.</p>
+        <p className="text-sm text-muted-foreground">
+          No working hours defined.
+        </p>
       )}
 
       {fields.map((field, index) => (

@@ -18,21 +18,25 @@ import {
   deletePatient as _deletePatient,
 } from "@/core/patients/services/patients.service";
 import { syncPatientNameOnAppointments } from "@/core/appointments/services/appointments.service";
-import type { PatientFilters, PaginatedPatients, Patient } from "@/core/patients/types";
+import type {
+  PatientFilters,
+  PaginatedPatients,
+  Patient,
+} from "@/core/patients/types";
 
-type ActionResult<T> = { success: true; data: T } | { success: false; error: string };
+type ActionResult<T> =
+  { success: true; data: T } | { success: false; error: string };
 
 async function resolveProfile() {
   const { userId } = await auth();
   if (!userId) return null;
-  const profile = await prisma.userProfile.findUnique({ where: { id: userId } });
+  const profile = await prisma.userProfile.findUnique({
+    where: { id: userId },
+  });
   return profile ?? null;
 }
 
-function checkPermission(
-  roleId: string,
-  permission: PermissionKey,
-): boolean {
+function checkPermission(roleId: string, permission: PermissionKey): boolean {
   const perms = ROLE_PERMISSIONS[roleId as keyof typeof ROLE_PERMISSIONS];
   if (!perms) return false;
   return perms.includes(permission);
@@ -83,9 +87,16 @@ export async function createPatient(
     }
     const parsed = createPatientSchema.safeParse(input);
     if (!parsed.success) {
-      return { success: false, error: parsed.error.issues[0]?.message ?? "Validation error" };
+      return {
+        success: false,
+        error: parsed.error.issues[0]?.message ?? "Validation error",
+      };
     }
-    const data = await _createPatient(profile.organizationId, parsed.data, profile.id);
+    const data = await _createPatient(
+      profile.organizationId,
+      parsed.data,
+      profile.id,
+    );
     return { success: true, data };
   } catch (error) {
     console.error("createPatient error:", error);
@@ -105,10 +116,21 @@ export async function updatePatient(
     }
     const parsed = updatePatientSchema.safeParse(input);
     if (!parsed.success) {
-      return { success: false, error: parsed.error.issues[0]?.message ?? "Validation error" };
+      return {
+        success: false,
+        error: parsed.error.issues[0]?.message ?? "Validation error",
+      };
     }
-    const data = await _updatePatient(profile.organizationId, id, parsed.data, profile.id);
-    if (parsed.data.firstName !== undefined || parsed.data.lastName !== undefined) {
+    const data = await _updatePatient(
+      profile.organizationId,
+      id,
+      parsed.data,
+      profile.id,
+    );
+    if (
+      parsed.data.firstName !== undefined ||
+      parsed.data.lastName !== undefined
+    ) {
       const newName = `${data.firstName} ${data.lastName}`.trim();
       await syncPatientNameOnAppointments(profile.organizationId, id, newName);
     }
@@ -119,9 +141,7 @@ export async function updatePatient(
   }
 }
 
-export async function deletePatient(
-  id: string,
-): Promise<ActionResult<void>> {
+export async function deletePatient(id: string): Promise<ActionResult<void>> {
   try {
     const profile = await resolveProfile();
     if (!profile) return { success: false, error: "Unauthorized" };

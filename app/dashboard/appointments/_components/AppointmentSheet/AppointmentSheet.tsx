@@ -64,7 +64,10 @@ export function AppointmentSheet({
     defaultValues: getInitialValues(appointment, defaultDate),
   });
 
-  const scheduledStart = useWatch({ control: form.control, name: "scheduledStart" });
+  const scheduledStart = useWatch({
+    control: form.control,
+    name: "scheduledStart",
+  });
   const showPastWarning = isPastDateTime(scheduledStart);
 
   useEffect(() => {

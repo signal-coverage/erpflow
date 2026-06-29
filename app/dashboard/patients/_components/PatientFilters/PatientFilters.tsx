@@ -16,14 +16,21 @@ interface PatientFiltersProps {
   onFiltersChange: (filters: PatientFilters) => void;
 }
 
-export function PatientFilters({ filters, onFiltersChange }: PatientFiltersProps) {
+export function PatientFilters({
+  filters,
+  onFiltersChange,
+}: PatientFiltersProps) {
   const [searchInput, setSearchInput] = useState(filters.search ?? "");
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
-      onFiltersChange({ ...filters, search: searchInput || undefined, page: 1 });
+      onFiltersChange({
+        ...filters,
+        search: searchInput || undefined,
+        page: 1,
+      });
     }, 300);
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);

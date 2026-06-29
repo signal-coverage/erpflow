@@ -1,7 +1,9 @@
 import type { PatientSheetProps } from "./types";
 import type { FormValues } from "./types";
 
-export function getInitialValues(patient?: PatientSheetProps["patient"]): FormValues {
+export function getInitialValues(
+  patient?: PatientSheetProps["patient"],
+): FormValues {
   if (!patient) {
     return {
       firstName: "",

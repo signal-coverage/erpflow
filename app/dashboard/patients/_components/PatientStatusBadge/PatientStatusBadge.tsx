@@ -8,8 +8,6 @@ interface PatientStatusBadgeProps {
 
 export function PatientStatusBadge({ status }: PatientStatusBadgeProps) {
   return (
-    <Badge variant={STATUS_BADGE_VARIANT[status]}>
-      {STATUS_LABEL[status]}
-    </Badge>
+    <Badge variant={STATUS_BADGE_VARIANT[status]}>{STATUS_LABEL[status]}</Badge>
   );
 }

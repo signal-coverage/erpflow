@@ -10,17 +10,23 @@ import type {
   PatientFilters,
   PaginatedPatients,
 } from "@/core/patients/types";
-import type { CreatePatientInput, UpdatePatientInput } from "@/core/patients/schemas/patient.schema";
+import type {
+  CreatePatientInput,
+  UpdatePatientInput,
+} from "@/core/patients/schemas/patient.schema";
 import { Prisma } from "@/lib/generated/prisma/client";
 
-type PatientRow = NonNullable<Awaited<ReturnType<typeof prisma.patient.findUnique>>>;
+type PatientRow = NonNullable<
+  Awaited<ReturnType<typeof prisma.patient.findUnique>>
+>;
 
 function toInsuranceInfo(raw: unknown): InsuranceInfo | undefined {
   if (!raw || typeof raw !== "object" || Array.isArray(raw)) return undefined;
   const r = raw as Record<string, unknown>;
   return {
     provider: typeof r.provider === "string" ? r.provider : undefined,
-    policyNumber: typeof r.policyNumber === "string" ? r.policyNumber : undefined,
+    policyNumber:
+      typeof r.policyNumber === "string" ? r.policyNumber : undefined,
     groupNumber: typeof r.groupNumber === "string" ? r.groupNumber : undefined,
     holderName: typeof r.holderName === "string" ? r.holderName : undefined,
   };
@@ -91,7 +97,9 @@ export async function listPatients(
           OR: [
             { firstName: { contains: filters.search, mode: "insensitive" } },
             { lastName: { contains: filters.search, mode: "insensitive" } },
-            { documentNumber: { contains: filters.search, mode: "insensitive" } },
+            {
+              documentNumber: { contains: filters.search, mode: "insensitive" },
+            },
           ],
         }
       : {}),
@@ -163,8 +171,12 @@ export async function updatePatient(
   const row = await prisma.patient.update({
     where: { id, organizationId: orgId },
     data: {
-      ...(input.documentType !== undefined && { documentType: input.documentType }),
-      ...(input.documentNumber !== undefined && { documentNumber: input.documentNumber }),
+      ...(input.documentType !== undefined && {
+        documentType: input.documentType,
+      }),
+      ...(input.documentNumber !== undefined && {
+        documentNumber: input.documentNumber,
+      }),
       ...(input.firstName !== undefined && { firstName: input.firstName }),
       ...(input.lastName !== undefined && { lastName: input.lastName }),
       ...(input.birthDate !== undefined && {

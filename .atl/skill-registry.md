@@ -59,30 +59,30 @@ Last updated: 2026-06-28
 
 These files define project-level conventions. Include them when delegating tasks that touch architecture, routing, auth, or new module creation.
 
-| File | Description |
-| ---- | ----------- |
-| `C:\Users\Nico\Desktop\erpflow\AGENTS.md` | Next.js version warning — read node_modules/next/dist/docs/ before writing any Next.js code |
-| `C:\Users\Nico\Desktop\erpflow\CLAUDE.md` | Project-level agent instructions (references AGENTS.md) |
-| `C:\Users\Nico\Desktop\erpflow\docs\00-Vision.md` | ERPFlow product vision — modular ERP for healthcare |
-| `C:\Users\Nico\Desktop\erpflow\docs\01-Big-Picture.md` | Architecture overview — Core vs Plugin separation |
-| `C:\Users\Nico\Desktop\erpflow\docs\02-Architecture.md` | Modular Monolith conventions and folder responsibilities |
-| `C:\Users\Nico\Desktop\erpflow\docs\03-Roadmap.md` | Development roadmap |
-| `C:\Users\Nico\Desktop\erpflow\docs\04-Multi-Tenant.md` | Multi-tenancy design |
-| `C:\Users\Nico\Desktop\erpflow\docs\05-Domain Model.md` | Domain model specification |
+| File                                                    | Description                                                                                 |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `C:\Users\Nico\Desktop\erpflow\AGENTS.md`               | Next.js version warning — read node_modules/next/dist/docs/ before writing any Next.js code |
+| `C:\Users\Nico\Desktop\erpflow\CLAUDE.md`               | Project-level agent instructions (references AGENTS.md)                                     |
+| `C:\Users\Nico\Desktop\erpflow\docs\00-Vision.md`       | ERPFlow product vision — modular ERP for healthcare                                         |
+| `C:\Users\Nico\Desktop\erpflow\docs\01-Big-Picture.md`  | Architecture overview — Core vs Plugin separation                                           |
+| `C:\Users\Nico\Desktop\erpflow\docs\02-Architecture.md` | Modular Monolith conventions and folder responsibilities                                    |
+| `C:\Users\Nico\Desktop\erpflow\docs\03-Roadmap.md`      | Development roadmap                                                                         |
+| `C:\Users\Nico\Desktop\erpflow\docs\04-Multi-Tenant.md` | Multi-tenancy design                                                                        |
+| `C:\Users\Nico\Desktop\erpflow\docs\05-Domain Model.md` | Domain model specification                                                                  |
 
 ## SDD Skills (user-level)
 
-| Skill | Trigger | Path |
-| ----- | ------- | ---- |
+| Skill         | Trigger                                             | Path                                                |
+| ------------- | --------------------------------------------------- | --------------------------------------------------- |
 | `sdd-explore` | Explore a topic, investigate an idea, read codebase | `C:\Users\Nico\.claude\skills\sdd-explore\SKILL.md` |
-| `sdd-propose` | Write a proposal, PRD, change proposal | `C:\Users\Nico\.claude\skills\sdd-propose\SKILL.md` |
-| `sdd-spec` | Write specs, delta specifications | `C:\Users\Nico\.claude\skills\sdd-spec\SKILL.md` |
-| `sdd-design` | Technical design, architecture decisions | `C:\Users\Nico\.claude\skills\sdd-design\SKILL.md` |
-| `sdd-tasks` | Task breakdown, implementation plan | `C:\Users\Nico\.claude\skills\sdd-tasks\SKILL.md` |
-| `sdd-apply` | Implement tasks, write code | `C:\Users\Nico\.claude\skills\sdd-apply\SKILL.md` |
-| `sdd-verify` | Validate implementation against specs | `C:\Users\Nico\.claude\skills\sdd-verify\SKILL.md` |
-| `sdd-archive` | Close a change, persist final state | `C:\Users\Nico\.claude\skills\sdd-archive\SKILL.md` |
-| `sdd-onboard` | Guided SDD walkthrough | `C:\Users\Nico\.claude\skills\sdd-onboard\SKILL.md` |
+| `sdd-propose` | Write a proposal, PRD, change proposal              | `C:\Users\Nico\.claude\skills\sdd-propose\SKILL.md` |
+| `sdd-spec`    | Write specs, delta specifications                   | `C:\Users\Nico\.claude\skills\sdd-spec\SKILL.md`    |
+| `sdd-design`  | Technical design, architecture decisions            | `C:\Users\Nico\.claude\skills\sdd-design\SKILL.md`  |
+| `sdd-tasks`   | Task breakdown, implementation plan                 | `C:\Users\Nico\.claude\skills\sdd-tasks\SKILL.md`   |
+| `sdd-apply`   | Implement tasks, write code                         | `C:\Users\Nico\.claude\skills\sdd-apply\SKILL.md`   |
+| `sdd-verify`  | Validate implementation against specs               | `C:\Users\Nico\.claude\skills\sdd-verify\SKILL.md`  |
+| `sdd-archive` | Close a change, persist final state                 | `C:\Users\Nico\.claude\skills\sdd-archive\SKILL.md` |
+| `sdd-onboard` | Guided SDD walkthrough                              | `C:\Users\Nico\.claude\skills\sdd-onboard\SKILL.md` |
 
 ## Loading protocol
 
