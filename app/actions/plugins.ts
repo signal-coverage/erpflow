@@ -1,0 +1,135 @@
+"use server";
+
+import { auth } from "@clerk/nextjs/server";
+import { prisma } from "@/infrastructure/db/client";
+import { checkPermission } from "@/core/permissions/utils";
+import {
+  installPlugin as _installPlugin,
+  enablePlugin as _enablePlugin,
+  disablePlugin as _disablePlugin,
+  uninstallPlugin as _uninstallPlugin,
+  getInstalledPlugins as _getInstalledPlugins,
+} from "@/core/plugins/services/plugins.service";
+import { PLUGIN_REGISTRY } from "@/plugins";
+import type { PluginRegistryEntry } from "@/core/plugins/types";
+import type { ActionResult } from "@/core/billing/types";
+
+async function resolveProfile() {
+  const { userId } = await auth();
+  if (!userId) return null;
+  const profile = await prisma.userProfile.findUnique({
+    where: { id: userId },
+  });
+  return profile ?? null;
+}
+
+export async function getInstalledPlugins(): Promise<
+  ActionResult<PluginRegistryEntry[]>
+> {
+  try {
+    const profile = await resolveProfile();
+    if (!profile) return { success: false, error: "Unauthorized" };
+    if (!checkPermission(profile.roleId, "settings.manage")) {
+      return { success: false, error: "Forbidden" };
+    }
+    const data = await _getInstalledPlugins(profile.organizationId);
+    return { success: true, data };
+  } catch (error) {
+    console.error("getInstalledPlugins error:", error);
+    return { success: false, error: "Failed to fetch installed plugins" };
+  }
+}
+
+export async function installPlugin(
+  pluginId: string,
+): Promise<ActionResult<void>> {
+  try {
+    const profile = await resolveProfile();
+    if (!profile) return { success: false, error: "Unauthorized" };
+    if (!checkPermission(profile.roleId, "settings.manage")) {
+      return { success: false, error: "Forbidden" };
+    }
+    if (!PLUGIN_REGISTRY[pluginId]) {
+      return { success: false, error: `Plugin "${pluginId}" not found` };
+    }
+    const manifest = PLUGIN_REGISTRY[pluginId]!;
+    await _installPlugin(
+      profile.organizationId,
+      pluginId,
+      manifest.version,
+      profile.id,
+    );
+    return { success: true, data: undefined };
+  } catch (error: unknown) {
+    console.error("installPlugin error:", error);
+    if (
+      typeof error === "object" &&
+      error !== null &&
+      "code" in error &&
+      (error as { code: string }).code === "P2002"
+    ) {
+      return { success: false, error: "Plugin is already installed" };
+    }
+    return { success: false, error: "Failed to install plugin" };
+  }
+}
+
+export async function enablePlugin(
+  pluginId: string,
+): Promise<ActionResult<void>> {
+  try {
+    const profile = await resolveProfile();
+    if (!profile) return { success: false, error: "Unauthorized" };
+    if (!checkPermission(profile.roleId, "settings.manage")) {
+      return { success: false, error: "Forbidden" };
+    }
+    if (!PLUGIN_REGISTRY[pluginId]) {
+      return { success: false, error: `Plugin "${pluginId}" not found` };
+    }
+    await _enablePlugin(profile.organizationId, pluginId);
+    return { success: true, data: undefined };
+  } catch (error) {
+    console.error("enablePlugin error:", error);
+    return { success: false, error: "Failed to enable plugin" };
+  }
+}
+
+export async function disablePlugin(
+  pluginId: string,
+): Promise<ActionResult<void>> {
+  try {
+    const profile = await resolveProfile();
+    if (!profile) return { success: false, error: "Unauthorized" };
+    if (!checkPermission(profile.roleId, "settings.manage")) {
+      return { success: false, error: "Forbidden" };
+    }
+    if (!PLUGIN_REGISTRY[pluginId]) {
+      return { success: false, error: `Plugin "${pluginId}" not found` };
+    }
+    await _disablePlugin(profile.organizationId, pluginId);
+    return { success: true, data: undefined };
+  } catch (error) {
+    console.error("disablePlugin error:", error);
+    return { success: false, error: "Failed to disable plugin" };
+  }
+}
+
+export async function uninstallPlugin(
+  pluginId: string,
+): Promise<ActionResult<void>> {
+  try {
+    const profile = await resolveProfile();
+    if (!profile) return { success: false, error: "Unauthorized" };
+    if (!checkPermission(profile.roleId, "settings.manage")) {
+      return { success: false, error: "Forbidden" };
+    }
+    if (!PLUGIN_REGISTRY[pluginId]) {
+      return { success: false, error: `Plugin "${pluginId}" not found` };
+    }
+    await _uninstallPlugin(profile.organizationId, pluginId);
+    return { success: true, data: undefined };
+  } catch (error) {
+    console.error("uninstallPlugin error:", error);
+    return { success: false, error: "Failed to uninstall plugin" };
+  }
+}

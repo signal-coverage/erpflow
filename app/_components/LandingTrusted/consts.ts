@@ -1,3 +1,5 @@
+export { ease } from "@/lib/consts/animation";
+
 export const brands = [
   "Meridian Health",
   "CarePort",
@@ -6,5 +8,3 @@ export const brands = [
   "Solaris Health",
   "NovaCare",
 ];
-
-export const ease = [0.16, 1, 0.3, 1] as const;

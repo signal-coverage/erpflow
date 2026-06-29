@@ -1,4 +1,4 @@
-export const ease = [0.16, 1, 0.3, 1] as const;
+export { ease } from "@/lib/consts/animation";
 
 export const links: Record<string, string[]> = {
   Product: ["Features", "Specialties", "Pricing", "Changelog"],

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { useAuth } from "@/hooks/use-auth";
@@ -17,69 +18,67 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-const TIMEZONES = [
-  { value: "America/Argentina/Buenos_Aires", label: "Buenos Aires (ART)" },
-  { value: "America/New_York", label: "New York (ET)" },
-  { value: "America/Chicago", label: "Chicago (CT)" },
-  { value: "America/Denver", label: "Denver (MT)" },
-  { value: "America/Los_Angeles", label: "Los Angeles (PT)" },
-  { value: "Europe/London", label: "London (GMT)" },
-  { value: "Europe/Paris", label: "Paris (CET)" },
-  { value: "America/Sao_Paulo", label: "São Paulo (BRT)" },
-];
-
-const CURRENCIES = [
-  { value: "ARS", label: "ARS — Argentine Peso" },
-  { value: "USD", label: "USD — US Dollar" },
-  { value: "EUR", label: "EUR — Euro" },
-  { value: "BRL", label: "BRL — Brazilian Real" },
-  { value: "GBP", label: "GBP — British Pound" },
-];
+import { TIMEZONES, CURRENCIES } from "@/lib/consts";
+import { onboardingFormSchema, type OnboardingFormValues } from "./types";
 
 export default function OnboardingPage() {
   const { user } = useAuth();
   const router = useRouter();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState(user?.email ?? "");
-  const [timezone, setTimezone] = useState("America/Argentina/Buenos_Aires");
-  const [currency, setCurrency] = useState("ARS");
-  const [submitting, setSubmitting] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<OnboardingFormValues>({
+    resolver: zodResolver(onboardingFormSchema),
+    defaultValues: {
+      name: "",
+      email: user?.email ?? "",
+      timezone: "America/Argentina/Buenos_Aires",
+      currency: "ARS",
+    },
+  });
+
+  async function onSubmit(data: OnboardingFormValues) {
     if (!user) return;
-    setSubmitting(true);
-    try {
-      const org = await createOrganization(
-        {
-          name,
-          email,
-          timezone,
-          currency,
-          plan: "FREE",
-          status: "ACTIVE",
-          enabledPlugins: [],
-          createdBy: user.id,
-          updatedBy: user.id,
-        },
-        user.id,
-      );
-      await createUserProfile(user.id, {
-        organizationId: org.id,
-        roleId: "admin",
-        displayName: user.displayName ?? email.split("@")[0],
-        email,
+
+    const orgResult = await createOrganization(
+      {
+        name: data.name,
+        email: data.email,
+        timezone: data.timezone,
+        currency: data.currency,
+        plan: "FREE",
         status: "ACTIVE",
+        enabledPlugins: [],
         createdBy: user.id,
         updatedBy: user.id,
-      });
-      router.push("/dashboard");
-    } catch {
-      toast.error("Failed to create organization. Please try again.");
-    } finally {
-      setSubmitting(false);
+      },
+      user.id,
+    );
+
+    if (!orgResult.success) {
+      toast.error(orgResult.error ?? "Failed to create organization.");
+      return;
     }
+
+    const profileResult = await createUserProfile(user.id, {
+      organizationId: orgResult.data.id,
+      roleId: "admin",
+      displayName: user.displayName ?? data.email.split("@")[0],
+      email: data.email,
+      status: "ACTIVE",
+      createdBy: user.id,
+      updatedBy: user.id,
+    });
+
+    if (!profileResult.success) {
+      toast.error(profileResult.error ?? "Failed to create user profile.");
+      return;
+    }
+
+    router.push("/dashboard");
   }
 
   return (
@@ -89,59 +88,93 @@ export default function OnboardingPage() {
           <CardTitle>Set up your organization</CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Organization name</Label>
               <Input
                 id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
+                {...register("name")}
                 placeholder="Clínica San Martín"
+                aria-invalid={!!errors.name}
               />
+              {errors.name && (
+                <p className="text-sm text-destructive">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
+
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
+                {...register("email")}
+                aria-invalid={!!errors.email}
               />
+              {errors.email && (
+                <p className="text-sm text-destructive">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
+
             <div className="space-y-2">
               <Label htmlFor="timezone">Timezone</Label>
-              <Select value={timezone} onValueChange={setTimezone}>
-                <SelectTrigger id="timezone">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {TIMEZONES.map((tz) => (
-                    <SelectItem key={tz.value} value={tz.value}>
-                      {tz.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <Controller
+                control={control}
+                name="timezone"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger id="timezone">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {TIMEZONES.map((tz) => (
+                        <SelectItem key={tz.value} value={tz.value}>
+                          {tz.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+              {errors.timezone && (
+                <p className="text-sm text-destructive">
+                  {errors.timezone.message}
+                </p>
+              )}
             </div>
+
             <div className="space-y-2">
               <Label htmlFor="currency">Currency</Label>
-              <Select value={currency} onValueChange={setCurrency}>
-                <SelectTrigger id="currency">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {CURRENCIES.map((c) => (
-                    <SelectItem key={c.value} value={c.value}>
-                      {c.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <Controller
+                control={control}
+                name="currency"
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger id="currency">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {CURRENCIES.map((c) => (
+                        <SelectItem key={c.value} value={c.value}>
+                          {c.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+              {errors.currency && (
+                <p className="text-sm text-destructive">
+                  {errors.currency.message}
+                </p>
+              )}
             </div>
-            <Button type="submit" className="w-full" disabled={submitting}>
-              {submitting ? "Creating…" : "Create organization"}
+
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Creating…" : "Create organization"}
             </Button>
           </form>
         </CardContent>

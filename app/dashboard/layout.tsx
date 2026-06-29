@@ -7,6 +7,7 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/app/dashboard/_components/AppSidebar";
 import { AppHeader } from "@/app/dashboard/_components/AppHeader";
 import { OrganizationProvider } from "@/providers/organization-provider";
+import { PluginProvider } from "@/providers/plugin-provider";
 import { DashboardGuard } from "@/app/dashboard/_components/DashboardGuard";
 
 export default function DashboardLayout({
@@ -27,19 +28,21 @@ export default function DashboardLayout({
 
   return (
     <OrganizationProvider>
-      <DashboardGuard>
-        <SidebarProvider className="bg-sidebar">
-          <AppSidebar />
-          <div className="h-svh overflow-hidden lg:p-2 w-full">
-            <div className="lg:border lg:rounded-xl overflow-hidden flex flex-col bg-background h-full w-full">
-              <AppHeader />
-              <main className="flex-1 overflow-y-auto p-4 md:p-6">
-                {children}
-              </main>
+      <PluginProvider>
+        <DashboardGuard>
+          <SidebarProvider className="bg-sidebar">
+            <AppSidebar />
+            <div className="h-svh overflow-hidden lg:p-2 w-full">
+              <div className="lg:border lg:rounded-xl overflow-hidden flex flex-col bg-background h-full w-full">
+                <AppHeader />
+                <main className="flex-1 overflow-y-auto p-4 md:p-6">
+                  {children}
+                </main>
+              </div>
             </div>
-          </div>
-        </SidebarProvider>
-      </DashboardGuard>
+          </SidebarProvider>
+        </DashboardGuard>
+      </PluginProvider>
     </OrganizationProvider>
   );
 }

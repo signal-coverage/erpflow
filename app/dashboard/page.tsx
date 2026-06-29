@@ -4,20 +4,8 @@ import { useOrganization } from "@/core/organizations/hooks/use-organization";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, CalendarDays, CreditCard, Puzzle } from "lucide-react";
-
-const PLAN_LABEL: Record<string, string> = {
-  FREE: "Free",
-  STARTER: "Starter",
-  PROFESSIONAL: "Professional",
-  ENTERPRISE: "Enterprise",
-};
-
-const PLAN_VARIANT: Record<string, "default" | "secondary" | "outline"> = {
-  FREE: "outline",
-  STARTER: "secondary",
-  PROFESSIONAL: "default",
-  ENTERPRISE: "default",
-};
+import { PLAN_LABEL, PLAN_VARIANT } from "@/lib/consts";
+import { getGreeting } from "./utils";
 
 export default function DashboardPage() {
   const { organization, userProfile } = useOrganization();
@@ -119,11 +107,4 @@ function StatCard({
       </CardContent>
     </Card>
   );
-}
-
-function getGreeting() {
-  const h = new Date().getHours();
-  if (h < 12) return "Good morning";
-  if (h < 18) return "Good afternoon";
-  return "Good evening";
 }

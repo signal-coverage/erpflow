@@ -1,8 +1,7 @@
 "use server";
 
 import { prisma } from "@/infrastructure/db/client";
-import { ROLE_PERMISSIONS } from "@/core/permissions/permissions";
-import type { PermissionKey } from "@/core/permissions/types";
+import { checkPermission } from "@/core/permissions/utils";
 import {
   createProfessionalSchema,
   updateProfessionalSchema,
@@ -27,10 +26,8 @@ import type {
   ProfessionalFilters,
   PaginatedProfessionals,
 } from "@/core/professionals/types";
+import type { ActionResult } from "@/core/billing/types";
 import { auth } from "@clerk/nextjs/server";
-
-type ActionResult<T> =
-  { success: true; data: T } | { success: false; error: string };
 
 async function resolveProfile() {
   const { userId } = await auth();
@@ -39,12 +36,6 @@ async function resolveProfile() {
     where: { id: userId },
   });
   return profile ?? null;
-}
-
-function checkPermission(roleId: string, permission: PermissionKey): boolean {
-  const perms = ROLE_PERMISSIONS[roleId as keyof typeof ROLE_PERMISSIONS];
-  if (!perms) return false;
-  return perms.includes(permission);
 }
 
 export async function getProfessionals(

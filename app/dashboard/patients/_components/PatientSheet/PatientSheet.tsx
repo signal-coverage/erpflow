@@ -1,6 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
 import { toast } from "sonner";
 import {
   Sheet,
@@ -20,12 +24,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { createPatient, updatePatient } from "@/app/actions/patients";
+import { Calendar } from "@/components/ui/calendar";
 import {
-  createPatientSchema,
-  updatePatientSchema,
-} from "@/core/patients/schemas/patient.schema";
-import type { PatientSheetProps, FormValues } from "./types";
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
+import { createPatient, updatePatient } from "@/app/actions/patients";
+import type { PatientSheetProps, PatientFormValues } from "./types";
+import { patientFormSchema } from "./types";
 import { getInitialValues } from "./utils";
 
 export function PatientSheet({
@@ -35,81 +43,58 @@ export function PatientSheet({
   onSuccess,
 }: PatientSheetProps) {
   const isEdit = !!patient;
-  const [form, setForm] = useState<FormValues>(() => getInitialValues(patient));
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [submitting, setSubmitting] = useState(false);
+  const [calendarOpen, setCalendarOpen] = useState(false);
 
-  // Reset form when patient prop changes (open for different patient)
-  const handleOpenChange = (value: boolean) => {
-    if (value) {
-      setForm(getInitialValues(patient));
-      setErrors({});
+  const {
+    register,
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<PatientFormValues>({
+    resolver: zodResolver(patientFormSchema),
+    defaultValues: getInitialValues(patient),
+  });
+
+  useEffect(() => {
+    if (open) {
+      reset(getInitialValues(patient));
     }
-    onOpenChange(value);
-  };
+  }, [open, patient, reset]);
 
-  function updateField(field: keyof FormValues, value: string) {
-    setForm((prev) => ({ ...prev, [field]: value }));
-    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: "" }));
-  }
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setErrors({});
-
+  async function onSubmit(values: PatientFormValues) {
     const payload = {
-      firstName: form.firstName,
-      lastName: form.lastName,
-      documentType: form.documentType as "DNI" | "PASSPORT" | "CUIL" | "OTHER",
-      documentNumber: form.documentNumber,
+      firstName: values.firstName,
+      lastName: values.lastName,
+      documentType: values.documentType as
+        "DNI" | "PASSPORT" | "CUIL" | "OTHER",
+      documentNumber: values.documentNumber,
       gender:
-        (form.gender as
+        (values.gender as
           "MALE" | "FEMALE" | "OTHER" | "PREFER_NOT_TO_SAY" | undefined) ||
         undefined,
-      birthDate: form.birthDate || undefined,
-      phone: form.phone || undefined,
-      email: form.email || undefined,
-      notes: form.notes || undefined,
+      birthDate: values.birthDate || undefined,
+      phone: values.phone || undefined,
+      email: values.email || undefined,
+      notes: values.notes || undefined,
     };
 
-    const schema = isEdit ? updatePatientSchema : createPatientSchema;
-    const parsed = schema.safeParse(payload);
+    const result = isEdit
+      ? await updatePatient(patient!.id, payload)
+      : await createPatient(payload as Parameters<typeof createPatient>[0]);
 
-    if (!parsed.success) {
-      const fieldErrors: Record<string, string> = {};
-      for (const issue of parsed.error.issues) {
-        const key = issue.path[0]?.toString() ?? "form";
-        fieldErrors[key] = issue.message;
-      }
-      setErrors(fieldErrors);
+    if (!result.success) {
+      toast.error(result.error);
       return;
     }
 
-    setSubmitting(true);
-    try {
-      const result = isEdit
-        ? await updatePatient(patient!.id, parsed.data)
-        : await createPatient(
-            parsed.data as Parameters<typeof createPatient>[0],
-          );
-
-      if (!result.success) {
-        toast.error(result.error);
-        return;
-      }
-
-      toast.success(isEdit ? "Patient updated" : "Patient created");
-      onOpenChange(false);
-      onSuccess();
-    } catch {
-      toast.error("An unexpected error occurred");
-    } finally {
-      setSubmitting(false);
-    }
+    toast.success(isEdit ? "Patient updated" : "Patient created");
+    onOpenChange(false);
+    onSuccess();
   }
 
   return (
-    <Sheet open={open} onOpenChange={handleOpenChange}>
+    <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent side="right" className="overflow-y-auto">
         <SheetHeader>
           <SheetTitle>{isEdit ? "Edit Patient" : "New Patient"}</SheetTitle>
@@ -120,118 +105,161 @@ export function PatientSheet({
           </SheetDescription>
         </SheetHeader>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 px-4 py-2">
-          <div className="grid grid-cols-2 gap-3">
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="firstName">First name *</Label>
-              <Input
-                id="firstName"
-                value={form.firstName}
-                onChange={(e) => updateField("firstName", e.target.value)}
-                aria-invalid={!!errors.firstName}
-              />
-              {errors.firstName && (
-                <p className="text-xs text-destructive">{errors.firstName}</p>
-              )}
-            </div>
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="lastName">Last name *</Label>
-              <Input
-                id="lastName"
-                value={form.lastName}
-                onChange={(e) => updateField("lastName", e.target.value)}
-                aria-invalid={!!errors.lastName}
-              />
-              {errors.lastName && (
-                <p className="text-xs text-destructive">{errors.lastName}</p>
-              )}
-            </div>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col gap-4 px-4 py-2"
+        >
+          <div className="flex flex-col gap-1">
+            <Label htmlFor="firstName">First name *</Label>
+            <Input
+              id="firstName"
+              {...register("firstName")}
+              aria-invalid={!!errors.firstName}
+            />
+            {errors.firstName && (
+              <p className="text-xs text-destructive">
+                {errors.firstName.message}
+              </p>
+            )}
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="documentType">Document type *</Label>
-              <Select
-                value={form.documentType}
-                onValueChange={(v) => updateField("documentType", v)}
-              >
-                <SelectTrigger
-                  id="documentType"
-                  aria-invalid={!!errors.documentType}
+          <div className="flex flex-col gap-1">
+            <Label htmlFor="lastName">Last name *</Label>
+            <Input
+              id="lastName"
+              {...register("lastName")}
+              aria-invalid={!!errors.lastName}
+            />
+            {errors.lastName && (
+              <p className="text-xs text-destructive">
+                {errors.lastName.message}
+              </p>
+            )}
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <Label htmlFor="documentType">Document type *</Label>
+            <Controller
+              control={control}
+              name="documentType"
+              render={({ field }) => (
+                <Select
+                  value={field.value ?? ""}
+                  onValueChange={field.onChange}
                 >
-                  <SelectValue placeholder="Select type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="DNI">DNI</SelectItem>
-                  <SelectItem value="PASSPORT">Passport</SelectItem>
-                  <SelectItem value="CUIL">CUIL</SelectItem>
-                  <SelectItem value="OTHER">Other</SelectItem>
-                </SelectContent>
-              </Select>
-              {errors.documentType && (
-                <p className="text-xs text-destructive">
-                  {errors.documentType}
-                </p>
+                  <SelectTrigger
+                    id="documentType"
+                    aria-invalid={!!errors.documentType}
+                  >
+                    <SelectValue placeholder="Select type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="DNI">DNI</SelectItem>
+                    <SelectItem value="PASSPORT">Passport</SelectItem>
+                    <SelectItem value="CUIL">CUIL</SelectItem>
+                    <SelectItem value="OTHER">Other</SelectItem>
+                  </SelectContent>
+                </Select>
               )}
-            </div>
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="documentNumber">Document number *</Label>
-              <Input
-                id="documentNumber"
-                value={form.documentNumber}
-                onChange={(e) => updateField("documentNumber", e.target.value)}
-                aria-invalid={!!errors.documentNumber}
-              />
-              {errors.documentNumber && (
-                <p className="text-xs text-destructive">
-                  {errors.documentNumber}
-                </p>
-              )}
-            </div>
+            />
+            {errors.documentType && (
+              <p className="text-xs text-destructive">
+                {errors.documentType.message}
+              </p>
+            )}
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="gender">Gender</Label>
-              <Select
-                value={form.gender}
-                onValueChange={(v) => updateField("gender", v)}
-              >
-                <SelectTrigger id="gender">
-                  <SelectValue placeholder="Select gender" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="MALE">Male</SelectItem>
-                  <SelectItem value="FEMALE">Female</SelectItem>
-                  <SelectItem value="OTHER">Other</SelectItem>
-                  <SelectItem value="PREFER_NOT_TO_SAY">
-                    Prefer not to say
-                  </SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="birthDate">Birth date</Label>
-              <Input
-                id="birthDate"
-                type="date"
-                value={form.birthDate}
-                onChange={(e) => updateField("birthDate", e.target.value)}
-                aria-invalid={!!errors.birthDate}
-              />
-              {errors.birthDate && (
-                <p className="text-xs text-destructive">{errors.birthDate}</p>
+          <div className="flex flex-col gap-1">
+            <Label htmlFor="documentNumber">Document number *</Label>
+            <Input
+              id="documentNumber"
+              {...register("documentNumber")}
+              aria-invalid={!!errors.documentNumber}
+            />
+            {errors.documentNumber && (
+              <p className="text-xs text-destructive">
+                {errors.documentNumber.message}
+              </p>
+            )}
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <Label htmlFor="gender">Gender</Label>
+            <Controller
+              control={control}
+              name="gender"
+              render={({ field }) => (
+                <Select
+                  value={field.value ?? ""}
+                  onValueChange={field.onChange}
+                >
+                  <SelectTrigger id="gender">
+                    <SelectValue placeholder="Select gender" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="MALE">Male</SelectItem>
+                    <SelectItem value="FEMALE">Female</SelectItem>
+                    <SelectItem value="OTHER">Other</SelectItem>
+                    <SelectItem value="PREFER_NOT_TO_SAY">
+                      Prefer not to say
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
               )}
-            </div>
+            />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <Label>Birth date</Label>
+            <Controller
+              control={control}
+              name="birthDate"
+              render={({ field }) => {
+                const selected = field.value
+                  ? new Date(field.value + "T12:00:00")
+                  : undefined;
+                return (
+                  <Popover open={calendarOpen} onOpenChange={setCalendarOpen}>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className={cn(
+                          "w-full justify-start text-left font-normal",
+                          !field.value && "text-muted-foreground",
+                        )}
+                      >
+                        <CalendarIcon className="mr-2 size-4" />
+                        {field.value ? format(selected!, "PPP") : "Pick a date"}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <Calendar
+                        mode="single"
+                        selected={selected}
+                        onSelect={(date) => {
+                          field.onChange(
+                            date ? format(date, "yyyy-MM-dd") : "",
+                          );
+                          setCalendarOpen(false);
+                        }}
+                        captionLayout="dropdown"
+                        defaultMonth={selected}
+                      />
+                    </PopoverContent>
+                  </Popover>
+                );
+              }}
+            />
+            {errors.birthDate && (
+              <p className="text-xs text-destructive">
+                {errors.birthDate.message}
+              </p>
+            )}
           </div>
 
           <div className="flex flex-col gap-1">
             <Label htmlFor="phone">Phone</Label>
-            <Input
-              id="phone"
-              value={form.phone}
-              onChange={(e) => updateField("phone", e.target.value)}
-            />
+            <Input id="phone" {...register("phone")} />
           </div>
 
           <div className="flex flex-col gap-1">
@@ -239,12 +267,11 @@ export function PatientSheet({
             <Input
               id="email"
               type="email"
-              value={form.email}
-              onChange={(e) => updateField("email", e.target.value)}
+              {...register("email")}
               aria-invalid={!!errors.email}
             />
             {errors.email && (
-              <p className="text-xs text-destructive">{errors.email}</p>
+              <p className="text-xs text-destructive">{errors.email.message}</p>
             )}
           </div>
 
@@ -252,8 +279,7 @@ export function PatientSheet({
             <Label htmlFor="notes">Notes</Label>
             <textarea
               id="notes"
-              value={form.notes}
-              onChange={(e) => updateField("notes", e.target.value)}
+              {...register("notes")}
               rows={3}
               className="rounded-lg border border-input bg-transparent px-3 py-2 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 resize-none"
               placeholder="Optional notes..."
@@ -265,12 +291,12 @@ export function PatientSheet({
               type="button"
               variant="outline"
               onClick={() => onOpenChange(false)}
-              disabled={submitting}
+              disabled={isSubmitting}
             >
               Cancel
             </Button>
-            <Button type="submit" disabled={submitting}>
-              {submitting
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting
                 ? "Saving..."
                 : isEdit
                   ? "Save changes"

@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { useForm, useFieldArray } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
@@ -26,6 +27,21 @@ import {
 import { WorkingHoursSection } from "@/app/dashboard/professionals/_components/WorkingHoursSection";
 import { getInitialValues, parseSpecialties } from "./utils";
 import type { ProfessionalSheetProps, ProfessionalFormValues } from "./types";
+
+const CALENDAR_COLORS = [
+  { label: "Tomato", value: "#EF4444" },
+  { label: "Flamingo", value: "#F97316" },
+  { label: "Tangerine", value: "#F59E0B" },
+  { label: "Banana", value: "#EAB308" },
+  { label: "Sage", value: "#84CC16" },
+  { label: "Basil", value: "#22C55E" },
+  { label: "Peacock", value: "#06B6D4" },
+  { label: "Blueberry", value: "#3B82F6" },
+  { label: "Lavender", value: "#8B5CF6" },
+  { label: "Grape", value: "#A855F7" },
+  { label: "Pink", value: "#EC4899" },
+  { label: "Graphite", value: "#6B7280" },
+];
 
 const professionalFormSchema = z.object({
   displayName: z.string().min(1, "Display name is required"),
@@ -55,11 +71,6 @@ export function ProfessionalSheet({
   const form = useForm<ProfessionalFormValues>({
     resolver: zodResolver(professionalFormSchema),
     defaultValues: getInitialValues(professional, existingWorkingHours),
-  });
-
-  const fieldArray = useFieldArray({
-    control: form.control,
-    name: "workingHours",
   });
 
   useEffect(() => {
@@ -179,37 +190,50 @@ export function ProfessionalSheet({
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="license">License</Label>
-              <Input id="license" {...form.register("license")} />
-            </div>
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="phone">Phone</Label>
-              <Input id="phone" {...form.register("phone")} />
-            </div>
+          <div className="flex flex-col gap-1">
+            <Label htmlFor="license">License</Label>
+            <Input id="license" {...form.register("license")} />
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" {...form.register("email")} />
-            </div>
-            <div className="flex flex-col gap-1">
-              <Label htmlFor="calendarColor">Calendar color</Label>
-              <Input
-                id="calendarColor"
-                {...form.register("calendarColor")}
-                placeholder="#3B82F6"
-              />
-            </div>
+          <div className="flex flex-col gap-1">
+            <Label htmlFor="phone">Phone</Label>
+            <Input id="phone" {...form.register("phone")} />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <Label htmlFor="email">Email</Label>
+            <Input id="email" type="email" {...form.register("email")} />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <Label>Calendar color</Label>
+            <Controller
+              control={form.control}
+              name="calendarColor"
+              render={({ field }) => (
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {CALENDAR_COLORS.map((color) => (
+                    <button
+                      key={color.value}
+                      type="button"
+                      title={color.label}
+                      onClick={() => field.onChange(color.value)}
+                      className={cn(
+                        "size-7 rounded-full border-2 transition-all hover:scale-110",
+                        field.value === color.value
+                          ? "border-foreground scale-110"
+                          : "border-transparent",
+                      )}
+                      style={{ backgroundColor: color.value }}
+                    />
+                  ))}
+                </div>
+              )}
+            />
           </div>
 
           <div className="border-t pt-4">
-            <WorkingHoursSection
-              fieldArray={fieldArray}
-              control={form.control}
-            />
+            <WorkingHoursSection control={form.control} />
           </div>
 
           <SheetFooter>

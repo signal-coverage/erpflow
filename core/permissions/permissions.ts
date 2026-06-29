@@ -25,6 +25,7 @@ export const ROLE_PERMISSIONS: Record<SystemRole, PermissionKey[]> = {
     "organization.read",
     "organization.update",
     "settings.manage",
+    "notifications.read",
   ],
   staff: [
     "patients.read",

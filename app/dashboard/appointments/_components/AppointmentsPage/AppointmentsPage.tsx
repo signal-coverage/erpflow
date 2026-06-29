@@ -22,6 +22,9 @@ export function AppointmentsPage() {
 
   const [selectedDate, setSelectedDate] = useState<Date>(() => new Date());
   const [appointments, setAppointments] = useState<Appointment[]>([]);
+  const [upcomingAppointments, setUpcomingAppointments] = useState<
+    Appointment[]
+  >([]);
   const [loading, setLoading] = useState(true);
   const [sheetOpen, setSheetOpen] = useState(false);
   const [editingAppointment, setEditingAppointment] = useState<
@@ -53,6 +56,24 @@ export function AppointmentsPage() {
       cancelled = true;
     };
   }, [selectedDate, refreshKey]);
+
+  useEffect(() => {
+    getAppointments({ status: "SCHEDULED" })
+      .then((r) => {
+        if (!r.success) return;
+        const now = new Date();
+        const upcoming = r.data
+          .filter((a) => new Date(a.scheduledStart) > now)
+          .sort(
+            (a, b) =>
+              new Date(a.scheduledStart).getTime() -
+              new Date(b.scheduledStart).getTime(),
+          )
+          .slice(0, 5);
+        setUpcomingAppointments(upcoming);
+      })
+      .catch(() => null);
+  }, [refreshKey]);
 
   function handleDateSelect(date: Date) {
     setSelectedDate(date);
@@ -130,11 +151,42 @@ export function AppointmentsPage() {
       </div>
 
       <div className="flex gap-6">
-        <div className="shrink-0">
+        <div className="shrink-0 flex flex-col gap-4">
           <AppointmentCalendar
             selected={selectedDate}
             onSelect={handleDateSelect}
           />
+
+          <div>
+            <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground mb-2">
+              Upcoming
+            </p>
+            {upcomingAppointments.length === 0 ? (
+              <p className="text-xs text-muted-foreground">
+                No upcoming appointments.
+              </p>
+            ) : (
+              <div className="divide-y divide-border">
+                {upcomingAppointments.map((appt) => (
+                  <div key={appt.id} className="py-2">
+                    <p className="text-xs text-muted-foreground">
+                      {format(new Date(appt.scheduledStart), "EEE, MMM d")}
+                      {" · "}
+                      {format(new Date(appt.scheduledStart), "HH:mm")}
+                    </p>
+                    <p className="text-sm font-medium truncate">
+                      {appt.patientName}
+                    </p>
+                    {appt.professionalName && (
+                      <p className="text-xs text-muted-foreground truncate">
+                        {appt.professionalName}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="flex-1 min-w-0">

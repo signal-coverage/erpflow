@@ -2,18 +2,20 @@
 
 import { useCallback } from "react";
 import { useOrganization } from "@/core/organizations/hooks/use-organization";
-import { ROLE_PERMISSIONS } from "@/core/permissions/permissions";
+import { usePlugins } from "@/providers/plugin-provider";
+import { checkPermission } from "@/core/permissions/utils";
 import type { PermissionKey } from "@/core/permissions/types";
 
 export function usePermission() {
   const { userProfile, loading } = useOrganization();
+  const { pluginPermissions } = usePlugins();
 
   const hasPermission = useCallback(
-    (key: PermissionKey): boolean => {
+    (permission: PermissionKey): boolean => {
       if (loading || !userProfile) return false;
-      return ROLE_PERMISSIONS[userProfile.roleId].includes(key);
+      return checkPermission(userProfile.roleId, permission, pluginPermissions);
     },
-    [userProfile, loading],
+    [userProfile, loading, pluginPermissions],
   );
 
   return { hasPermission };

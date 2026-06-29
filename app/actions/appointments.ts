@@ -2,8 +2,7 @@
 
 import { auth } from "@clerk/nextjs/server";
 import { prisma } from "@/infrastructure/db/client";
-import { ROLE_PERMISSIONS } from "@/core/permissions/permissions";
-import type { PermissionKey } from "@/core/permissions/types";
+import { checkPermission } from "@/core/permissions/utils";
 import {
   createAppointmentSchema,
   updateAppointmentSchema,
@@ -24,9 +23,7 @@ import type {
   AppointmentFilters,
   AppointmentStatus,
 } from "@/core/appointments/types";
-
-type ActionResult<T> =
-  { success: true; data: T } | { success: false; error: string };
+import type { ActionResult } from "@/core/billing/types";
 
 async function resolveProfile() {
   const { userId } = await auth();
@@ -35,12 +32,6 @@ async function resolveProfile() {
     where: { id: userId },
   });
   return profile ?? null;
-}
-
-function checkPermission(roleId: string, permission: PermissionKey): boolean {
-  const perms = ROLE_PERMISSIONS[roleId as keyof typeof ROLE_PERMISSIONS];
-  if (!perms) return false;
-  return perms.includes(permission);
 }
 
 export async function getAppointments(filters?: {
