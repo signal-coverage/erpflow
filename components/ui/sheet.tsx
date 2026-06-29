@@ -72,7 +72,8 @@ function SheetContent({
           // Sheet's layer also fires even if the original click target is inside
           // the Sheet. Guard by checking the real click target.
           const target = e.detail.originalEvent.target as Element | null;
-          if (target && e.currentTarget.contains(target)) {
+          const current = e.currentTarget as Element | null;
+          if (target && current?.contains(target)) {
             e.preventDefault();
             return;
           }
