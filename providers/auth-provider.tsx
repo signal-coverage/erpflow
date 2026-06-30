@@ -7,6 +7,7 @@ export interface AppUser {
   id: string;
   email: string | null;
   displayName: string | null;
+  imageUrl: string | null;
 }
 
 interface AuthContextValue {
@@ -28,6 +29,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             id: clerkUser.id,
             email: clerkUser.primaryEmailAddress?.emailAddress ?? null,
             displayName: clerkUser.fullName,
+            imageUrl: clerkUser.imageUrl ?? null,
           }
         : null,
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -35,6 +37,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       clerkUser?.id,
       clerkUser?.primaryEmailAddress?.emailAddress,
       clerkUser?.fullName,
+      clerkUser?.imageUrl,
     ],
   );
 

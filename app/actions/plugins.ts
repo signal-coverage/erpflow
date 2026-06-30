@@ -13,6 +13,7 @@ import {
 import { PLUGIN_REGISTRY } from "@/plugins";
 import type { PluginRegistryEntry } from "@/core/plugins/types";
 import type { ActionResult } from "@/core/billing/types";
+import type { SystemRole } from "@/core/users/types";
 
 async function resolveProfile() {
   const { userId } = await auth();
@@ -67,7 +68,15 @@ export async function installPlugin(
     ) {
       return { success: false, error: "Plugin is already installed" };
     }
-    return { success: false, error: "Failed to install plugin" };
+    const message =
+      error instanceof Error ? error.message : "Failed to install plugin";
+    return {
+      success: false,
+      error:
+        process.env.NODE_ENV === "development"
+          ? message
+          : "Failed to install plugin",
+    };
   }
 }
 
@@ -108,6 +117,32 @@ export async function disablePlugin(
   } catch (error) {
     console.error("disablePlugin error:", error);
     return { success: false, error: "Failed to disable plugin" };
+  }
+}
+
+export async function getMyProfileContext(): Promise<
+  ActionResult<{ roleId: SystemRole; specialties: string[] }>
+> {
+  try {
+    const profile = await resolveProfile();
+    if (!profile) return { success: false, error: "Unauthorized" };
+
+    let specialties: string[] = [];
+    if (profile.roleId === "professional") {
+      const professional = await prisma.professional.findFirst({
+        where: { userId: profile.id, organizationId: profile.organizationId },
+        select: { specialties: true },
+      });
+      specialties = professional?.specialties ?? [];
+    }
+
+    return {
+      success: true,
+      data: { roleId: profile.roleId as SystemRole, specialties },
+    };
+  } catch (error) {
+    console.error("getMyProfileContext error:", error);
+    return { success: false, error: "Failed to fetch profile context" };
   }
 }
 

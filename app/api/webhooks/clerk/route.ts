@@ -52,8 +52,14 @@ export async function POST(request: Request) {
     return new Response("Invalid webhook signature", { status: 401 });
   }
 
-  const { id, first_name, last_name, email_addresses, primary_email_address_id, public_metadata } =
-    event.data;
+  const {
+    id,
+    first_name,
+    last_name,
+    email_addresses,
+    primary_email_address_id,
+    public_metadata,
+  } = event.data;
 
   const { organizationId, roleId } = public_metadata ?? {};
 
@@ -71,7 +77,8 @@ export async function POST(request: Request) {
   }
 
   const displayName =
-    [first_name, last_name].filter(Boolean).join(" ") || primaryEmail.split("@")[0];
+    [first_name, last_name].filter(Boolean).join(" ") ||
+    primaryEmail.split("@")[0];
 
   try {
     await prisma.userProfile.upsert({

@@ -12,14 +12,19 @@ import type {
   PluginNavItem,
   PluginRegistryEntry,
 } from "@/core/plugins/types";
+import type { SystemRole } from "@/core/users/types";
 import { PLUGIN_REGISTRY } from "@/plugins";
-import { getInstalledPlugins } from "@/app/actions/plugins";
+import {
+  getInstalledPlugins,
+  getMyProfileContext,
+} from "@/app/actions/plugins";
 
 interface PluginContextValue {
   installedPlugins: PluginRegistryEntry[];
   enabledManifests: PluginManifest[];
   pluginNavItems: PluginNavItem[];
   pluginPermissions: string[];
+  userRole: SystemRole | null;
   isLoading: boolean;
   refetch: () => void;
 }
@@ -29,6 +34,7 @@ const PluginContext = createContext<PluginContextValue>({
   enabledManifests: [],
   pluginNavItems: [],
   pluginPermissions: [],
+  userRole: null,
   isLoading: true,
   refetch: () => {},
 });
@@ -41,12 +47,21 @@ export function PluginProvider({ children }: { children: React.ReactNode }) {
   const [installedPlugins, setInstalledPlugins] = useState<
     PluginRegistryEntry[]
   >([]);
+  const [userRole, setUserRole] = useState<SystemRole | null>(null);
+  const [userSpecialties, setUserSpecialties] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchPlugins = useCallback(async () => {
     setIsLoading(true);
-    const result = await getInstalledPlugins();
-    if (result.success) setInstalledPlugins(result.data);
+    const [pluginsResult, profileResult] = await Promise.all([
+      getInstalledPlugins(),
+      getMyProfileContext(),
+    ]);
+    if (pluginsResult.success) setInstalledPlugins(pluginsResult.data);
+    if (profileResult.success) {
+      setUserRole(profileResult.data.roleId);
+      setUserSpecialties(profileResult.data.specialties);
+    }
     setIsLoading(false);
   }, []);
 
@@ -59,7 +74,15 @@ export function PluginProvider({ children }: { children: React.ReactNode }) {
     .map((p) => PLUGIN_REGISTRY[p.pluginId])
     .filter((m): m is PluginManifest => m !== undefined);
 
-  const pluginNavItems = enabledManifests.flatMap((m) => m.navigation);
+  const allPluginNavItems = enabledManifests.flatMap((m) => m.navigation);
+
+  const pluginNavItems =
+    userRole === "professional"
+      ? enabledManifests
+          .filter((m) => userSpecialties.includes(m.id))
+          .flatMap((m) => m.navigation)
+      : allPluginNavItems;
+
   const pluginPermissions = enabledManifests.flatMap((m) => m.permissions);
 
   return (
@@ -69,6 +92,7 @@ export function PluginProvider({ children }: { children: React.ReactNode }) {
         enabledManifests,
         pluginNavItems,
         pluginPermissions,
+        userRole,
         isLoading,
         refetch: fetchPlugins,
       }}

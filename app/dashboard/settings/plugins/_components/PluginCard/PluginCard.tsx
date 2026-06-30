@@ -10,6 +10,7 @@ import {
   disablePlugin,
   uninstallPlugin,
 } from "@/app/actions/plugins";
+import { usePlugins } from "@/providers/plugin-provider";
 
 interface PluginCardProps {
   manifest: PluginManifest;
@@ -19,6 +20,7 @@ interface PluginCardProps {
 
 export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
   const [loading, setLoading] = useState(false);
+  const { refetch: refetchPluginProvider } = usePlugins();
 
   async function handleAction(
     action: () => Promise<{ success: boolean; error?: string }>,
@@ -30,6 +32,7 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
       toast.error(result.error ?? "Action failed");
     } else {
       toast.success(successMessage);
+      refetchPluginProvider();
     }
     onRefresh();
     setLoading(false);
@@ -74,7 +77,12 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
         {!isInstalled && (
           <button
             disabled={loading}
-            onClick={() => handleAction(() => installPlugin(manifest.id), `${manifest.name} installed`)}
+            onClick={() =>
+              handleAction(
+                () => installPlugin(manifest.id),
+                `${manifest.name} installed`,
+              )
+            }
             className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
           >
             Install
@@ -83,7 +91,12 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
         {isInstalled && !isEnabled && (
           <button
             disabled={loading}
-            onClick={() => handleAction(() => enablePlugin(manifest.id), `${manifest.name} enabled`)}
+            onClick={() =>
+              handleAction(
+                () => enablePlugin(manifest.id),
+                `${manifest.name} enabled`,
+              )
+            }
             className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
           >
             Enable
@@ -92,7 +105,12 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
         {isInstalled && isEnabled && (
           <button
             disabled={loading}
-            onClick={() => handleAction(() => disablePlugin(manifest.id), `${manifest.name} disabled`)}
+            onClick={() =>
+              handleAction(
+                () => disablePlugin(manifest.id),
+                `${manifest.name} disabled`,
+              )
+            }
             className="rounded-md border px-3 py-1.5 text-xs font-medium hover:bg-muted disabled:opacity-50"
           >
             Disable
@@ -101,7 +119,12 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
         {isInstalled && (
           <button
             disabled={loading}
-            onClick={() => handleAction(() => uninstallPlugin(manifest.id), `${manifest.name} uninstalled`)}
+            onClick={() =>
+              handleAction(
+                () => uninstallPlugin(manifest.id),
+                `${manifest.name} uninstalled`,
+              )
+            }
             className="rounded-md border border-destructive px-3 py-1.5 text-xs font-medium text-destructive hover:bg-destructive/10 disabled:opacity-50"
           >
             Uninstall
