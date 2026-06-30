@@ -29,9 +29,6 @@ export async function getInstalledPlugins(): Promise<
   try {
     const profile = await resolveProfile();
     if (!profile) return { success: false, error: "Unauthorized" };
-    if (!checkPermission(profile.roleId, "settings.manage")) {
-      return { success: false, error: "Forbidden" };
-    }
     const data = await _getInstalledPlugins(profile.organizationId);
     return { success: true, data };
   } catch (error) {

@@ -44,8 +44,9 @@ export default function UsersSettingsPage() {
   }
 
   const canEdit = hasPermission("users.update");
+  const canInvite = hasPermission("users.invite");
 
   return (
-    <UsersPage users={users} currentUserId={user?.id ?? ""} canEdit={canEdit} />
+    <UsersPage users={users} currentUserId={user?.id ?? ""} canEdit={canEdit} canInvite={canInvite} />
   );
 }

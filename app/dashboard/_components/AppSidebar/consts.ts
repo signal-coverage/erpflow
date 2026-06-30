@@ -4,8 +4,6 @@ import {
   Activity,
   Calendar,
   CreditCard,
-  Settings,
-  HelpCircle,
 } from "lucide-react";
 
 export const navItems = [
@@ -14,9 +12,4 @@ export const navItems = [
   { title: "Professionals", href: "/dashboard/professionals", icon: Activity },
   { title: "Appointments", href: "/dashboard/appointments", icon: Calendar },
   { title: "Billing", href: "/dashboard/billing", icon: CreditCard },
-];
-
-export const footerItems = [
-  { title: "Settings", href: "/dashboard/settings", icon: Settings },
-  { title: "Help", href: "/dashboard/help", icon: HelpCircle },
 ];

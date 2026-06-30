@@ -1,14 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { updateUserProfile } from "@/app/actions/users";
 import { UserTable } from "../UserTable";
+import { InviteUserSheet } from "../InviteUserSheet";
+import { Button } from "@/components/ui/button";
 import type { SystemRole, UserStatus } from "@/core/users/types";
 import type { UsersPageProps } from "./types";
 
-export function UsersPage({ users, currentUserId, canEdit }: UsersPageProps) {
+export function UsersPage({ users, currentUserId, canEdit, canInvite }: UsersPageProps) {
   const router = useRouter();
+  const [inviteOpen, setInviteOpen] = useState(false);
 
   async function handleRoleChange(uid: string, roleId: SystemRole) {
     const result = await updateUserProfile(uid, { roleId });
@@ -34,7 +38,12 @@ export function UsersPage({ users, currentUserId, canEdit }: UsersPageProps) {
 
   return (
     <div className="max-w-4xl space-y-6">
-      <h1 className="text-2xl font-semibold">Users</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-semibold">Users</h1>
+        {canInvite && (
+          <Button onClick={() => setInviteOpen(true)}>Invite User</Button>
+        )}
+      </div>
       <UserTable
         users={users}
         currentUserId={currentUserId}
@@ -42,6 +51,9 @@ export function UsersPage({ users, currentUserId, canEdit }: UsersPageProps) {
         onRoleChange={handleRoleChange}
         onStatusToggle={handleStatusToggle}
       />
+      {canInvite && (
+        <InviteUserSheet open={inviteOpen} onOpenChange={setInviteOpen} />
+      )}
     </div>
   );
 }

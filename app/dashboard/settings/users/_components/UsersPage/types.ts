@@ -4,4 +4,5 @@ export interface UsersPageProps {
   users: UserProfile[];
   currentUserId: string;
   canEdit: boolean;
+  canInvite: boolean;
 }

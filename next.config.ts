@@ -13,7 +13,10 @@ const nextConfig: NextConfig = {
       },
     },
   },
-  allowedDevOrigins: ["192.168.100.5"],
+  allowedDevOrigins: [
+    "192.168.100.5",
+    "smartly-riverbank-phoenix.ngrok-free.dev",
+  ],
   images: {
     remotePatterns: [
       {
