@@ -7,39 +7,31 @@ export async function installPlugin(
   version: string,
   installedBy: string,
 ): Promise<PluginRegistryEntry> {
-  const result = await prisma.$transaction(async (tx) => {
-    const entry = await tx.pluginRegistry.create({
-      data: {
-        organizationId: orgId,
-        pluginId,
-        version,
-        installedBy,
-        enabled: true,
-        config: {},
-      },
-    });
+  const entry = await prisma.pluginRegistry.create({
+    data: {
+      organizationId: orgId,
+      pluginId,
+      version,
+      installedBy,
+      enabled: true,
+      config: {},
+    },
+  });
 
-    await tx.organization.update({
-      where: { id: orgId },
-      data: {
-        enabledPlugins: {
-          push: pluginId,
-        },
-      },
-    });
-
-    return entry;
+  await prisma.organization.update({
+    where: { id: orgId },
+    data: { enabledPlugins: { push: pluginId } },
   });
 
   return {
-    id: result.id,
-    organizationId: result.organizationId,
-    pluginId: result.pluginId,
-    version: result.version,
-    enabled: result.enabled,
-    installedAt: result.installedAt,
-    installedBy: result.installedBy,
-    config: result.config as Record<string, unknown>,
+    id: entry.id,
+    organizationId: entry.organizationId,
+    pluginId: entry.pluginId,
+    version: entry.version,
+    enabled: entry.enabled,
+    installedAt: entry.installedAt,
+    installedBy: entry.installedBy,
+    config: entry.config as Record<string, unknown>,
   };
 }
 
@@ -47,51 +39,47 @@ export async function enablePlugin(
   orgId: string,
   pluginId: string,
 ): Promise<void> {
-  await prisma.$transaction(async (tx) => {
-    await tx.pluginRegistry.update({
-      where: {
-        organizationId_pluginId: { organizationId: orgId, pluginId },
-      },
-      data: { enabled: true },
-    });
-
-    const org = await tx.organization.findUnique({
-      where: { id: orgId },
-      select: { enabledPlugins: true },
-    });
-
-    const current = org?.enabledPlugins ?? [];
-    if (!current.includes(pluginId)) {
-      await tx.organization.update({
-        where: { id: orgId },
-        data: { enabledPlugins: { push: pluginId } },
-      });
-    }
+  await prisma.pluginRegistry.update({
+    where: {
+      organizationId_pluginId: { organizationId: orgId, pluginId },
+    },
+    data: { enabled: true },
   });
+
+  const org = await prisma.organization.findUnique({
+    where: { id: orgId },
+    select: { enabledPlugins: true },
+  });
+
+  const current = org?.enabledPlugins ?? [];
+  if (!current.includes(pluginId)) {
+    await prisma.organization.update({
+      where: { id: orgId },
+      data: { enabledPlugins: { push: pluginId } },
+    });
+  }
 }
 
 export async function disablePlugin(
   orgId: string,
   pluginId: string,
 ): Promise<void> {
-  await prisma.$transaction(async (tx) => {
-    await tx.pluginRegistry.update({
-      where: {
-        organizationId_pluginId: { organizationId: orgId, pluginId },
-      },
-      data: { enabled: false },
-    });
+  await prisma.pluginRegistry.update({
+    where: {
+      organizationId_pluginId: { organizationId: orgId, pluginId },
+    },
+    data: { enabled: false },
+  });
 
-    const org = await tx.organization.findUnique({
-      where: { id: orgId },
-      select: { enabledPlugins: true },
-    });
+  const org = await prisma.organization.findUnique({
+    where: { id: orgId },
+    select: { enabledPlugins: true },
+  });
 
-    const updated = (org?.enabledPlugins ?? []).filter((p) => p !== pluginId);
-    await tx.organization.update({
-      where: { id: orgId },
-      data: { enabledPlugins: { set: updated } },
-    });
+  const updated = (org?.enabledPlugins ?? []).filter((p) => p !== pluginId);
+  await prisma.organization.update({
+    where: { id: orgId },
+    data: { enabledPlugins: { set: updated } },
   });
 }
 
@@ -99,23 +87,21 @@ export async function uninstallPlugin(
   orgId: string,
   pluginId: string,
 ): Promise<void> {
-  await prisma.$transaction(async (tx) => {
-    await tx.pluginRegistry.delete({
-      where: {
-        organizationId_pluginId: { organizationId: orgId, pluginId },
-      },
-    });
+  await prisma.pluginRegistry.delete({
+    where: {
+      organizationId_pluginId: { organizationId: orgId, pluginId },
+    },
+  });
 
-    const org = await tx.organization.findUnique({
-      where: { id: orgId },
-      select: { enabledPlugins: true },
-    });
+  const org = await prisma.organization.findUnique({
+    where: { id: orgId },
+    select: { enabledPlugins: true },
+  });
 
-    const updated = (org?.enabledPlugins ?? []).filter((p) => p !== pluginId);
-    await tx.organization.update({
-      where: { id: orgId },
-      data: { enabledPlugins: { set: updated } },
-    });
+  const updated = (org?.enabledPlugins ?? []).filter((p) => p !== pluginId);
+  await prisma.organization.update({
+    where: { id: orgId },
+    data: { enabledPlugins: { set: updated } },
   });
 }
 

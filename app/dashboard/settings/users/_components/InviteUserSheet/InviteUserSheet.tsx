@@ -24,7 +24,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { inviteUser } from "@/app/actions/inviteUser";
-import { inviteUserFormSchema, type InviteUserFormValues, type InviteUserSheetProps } from "./types";
+import {
+  inviteUserFormSchema,
+  type InviteUserFormValues,
+  type InviteUserSheetProps,
+} from "./types";
 
 export function InviteUserSheet({ open, onOpenChange }: InviteUserSheetProps) {
   const router = useRouter();

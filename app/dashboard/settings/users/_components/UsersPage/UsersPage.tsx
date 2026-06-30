@@ -10,7 +10,12 @@ import { Button } from "@/components/ui/button";
 import type { SystemRole, UserStatus } from "@/core/users/types";
 import type { UsersPageProps } from "./types";
 
-export function UsersPage({ users, currentUserId, canEdit, canInvite }: UsersPageProps) {
+export function UsersPage({
+  users,
+  currentUserId,
+  canEdit,
+  canInvite,
+}: UsersPageProps) {
   const router = useRouter();
   const [inviteOpen, setInviteOpen] = useState(false);
 

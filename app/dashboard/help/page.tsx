@@ -1,4 +1,9 @@
-import { HelpCircle, BookOpen, MessageSquare, ExternalLink } from "lucide-react";
+import {
+  HelpCircle,
+  BookOpen,
+  MessageSquare,
+  ExternalLink,
+} from "lucide-react";
 
 export default function HelpPage() {
   return (

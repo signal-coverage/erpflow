@@ -16,7 +16,9 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator,
+  useSidebar,
 } from "@/components/ui/sidebar";
+import { Puzzle } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,11 +35,14 @@ export function AppSidebar() {
   const router = useRouter();
   const { user, signOut } = useAuth();
   const { openUserProfile } = useClerk();
-  const { pluginNavItems } = usePlugins();
-  const allNavItems = [...navItems, ...pluginNavItems];
+  const { pluginNavItems, userRole } = usePlugins();
+  const isProfessional = userRole === "professional";
 
+  const { state } = useSidebar();
+  const collapsed = state === "collapsed";
   const email = user?.email ?? "";
   const initials = email.split("@")[0]?.[0]?.toUpperCase() ?? "U";
+  const imageUrl = user?.imageUrl ?? null;
 
   async function handleSignOut() {
     await signOut();
@@ -45,83 +50,177 @@ export function AppSidebar() {
   }
 
   return (
-    <Sidebar collapsible="offcanvas" className="lg:border-r-0!">
+    <Sidebar
+      collapsible="icon"
+      className={`lg:border-r-0! ${collapsed && "pl-2"}`}
+    >
       <SidebarHeader>
-        <div className="flex items-center gap-2 px-2 py-1">
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground font-semibold text-sm">
+        <div
+          className={`flex items-center py-1 ${collapsed ? "justify-center" : "gap-2 px-2"}`}
+        >
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground font-semibold text-sm">
             E
           </div>
-          <span className="font-semibold text-sm">ERPFlow</span>
+          {!collapsed && (
+            <span className="font-semibold text-sm truncate">ERPFlow</span>
+          )}
         </div>
-        <div className="px-2 pb-1">
-          <input
-            type="text"
-            placeholder="Search... ⌘K"
-            className="w-full rounded-md border border-input bg-background px-3 py-1.5 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
-          />
-        </div>
+        {!collapsed && (
+          <div className="pl-1 py-2">
+            <input
+              type="text"
+              placeholder="Search... ⌘K"
+              className="w-full rounded-md border border-input bg-background px-3 py-1.5 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring"
+            />
+          </div>
+        )}
       </SidebarHeader>
 
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {allNavItems.map((item) => (
-                <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton asChild isActive={pathname === item.href}>
-                    <Link href={item.href}>
-                      <item.icon className="h-4 w-4" />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        {!isProfessional && (
+          <>
+            {pluginNavItems.length > 0 && (
+              <SidebarSeparator className={`${collapsed && "ml-0"}`} />
+            )}
+            <SidebarGroup className={collapsed ? "pl-1" : ""}>
+              {!collapsed && (
+                <SidebarGroupLabel>Administration</SidebarGroupLabel>
+              )}
+              <SidebarGroupContent>
+                <SidebarMenu>
+                  {navItems.map((item) => (
+                    <SidebarMenuItem key={item.href}>
+                      <SidebarMenuButton
+                        asChild
+                        isActive={pathname === item.href}
+                      >
+                        <Link
+                          href={item.href}
+                          className={collapsed ? "justify-center" : ""}
+                        >
+                          {collapsed ? (
+                            <span className="flex items-center justify-center pointer-events-none">
+                              <item.icon className="h-5 w-5" />
+                            </span>
+                          ) : (
+                            <>
+                              <item.icon className="h-4 w-4" />
+                              <span>{item.title}</span>
+                            </>
+                          )}
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))}
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </SidebarGroup>
+          </>
+        )}
 
-        <SidebarSeparator />
+        <SidebarSeparator className={`${collapsed && "ml-0"}`} />
 
-        <SidebarGroup>
-          <SidebarGroupLabel>Favorites</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <p className="px-2 py-1 text-xs text-muted-foreground">
-              No favorites yet
-            </p>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        {pluginNavItems.length > 0 && (
+          <SidebarGroup className={collapsed ? "pl-1" : ""}>
+            {!collapsed && <SidebarGroupLabel>Plugins</SidebarGroupLabel>}
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {pluginNavItems.map((item) => (
+                  <SidebarMenuItem key={item.href}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={pathname === item.href}
+                    >
+                      <Link
+                        href={item.href}
+                        className={collapsed ? "justify-center" : ""}
+                      >
+                        {collapsed ? (
+                          <span className="flex items-center justify-center pointer-events-none">
+                            <item.icon className="h-5 w-5" />
+                          </span>
+                        ) : (
+                          <>
+                            <item.icon className="h-4 w-4" />
+                            <span>{item.title}</span>
+                          </>
+                        )}
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        )}
+
+        <SidebarSeparator className={`${collapsed && "ml-0"}`} />
+
+        {!collapsed && (
+          <SidebarGroup>
+            <SidebarGroupLabel>Favorites</SidebarGroupLabel>
+            <SidebarGroupContent>
+              <p className="px-2 py-1 text-xs text-muted-foreground">
+                No favorites yet
+              </p>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        )}
       </SidebarContent>
 
       <SidebarFooter>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <button className="flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
-              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-medium">
-                {initials}
+            <button
+              className={`flex w-full rounded-md py-1.5 text-sm hover:bg-sidebar-accent hover:text-sidebar-accent-foreground ${collapsed ? "justify-center px-0" : "items-center gap-2 px-2"}`}
+            >
+              <div
+                className={`flex items-center justify-center rounded-full bg-primary text-primary-foreground font-medium overflow-hidden shrink-0 ${collapsed ? "h-8 w-8 text-sm" : "h-7 w-7 text-xs"}`}
+              >
+                {imageUrl ? (
+                  <img
+                    src={imageUrl}
+                    alt={initials}
+                    className="h-full w-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                ) : (
+                  initials
+                )}
               </div>
-              <span className="flex-1 truncate text-left">{email}</span>
-              <ChevronUp className="h-4 w-4 shrink-0" />
+              {!collapsed && (
+                <>
+                  <span className="flex-1 truncate text-left">{email}</span>
+                  <ChevronUp className="h-4 w-4 shrink-0" />
+                </>
+              )}
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent side="top" align="start" className="w-56">
-            <DropdownMenuItem onClick={() => openUserProfile()}>
+            <DropdownMenuItem
+              onClick={() => openUserProfile()}
+              className="cursor-pointer"
+            >
               <User className="h-4 w-4" />
               Account Settings
             </DropdownMenuItem>
-            <DropdownMenuItem asChild>
+            <DropdownMenuItem asChild className="cursor-pointer">
               <Link href="/dashboard/settings/organization">
                 <Settings className="h-4 w-4" />
                 Settings
               </Link>
             </DropdownMenuItem>
-            <DropdownMenuItem asChild>
+            <DropdownMenuItem asChild className="cursor-pointer">
               <Link href="/dashboard/help">
                 <HelpCircle className="h-4 w-4" />
                 Help
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={handleSignOut}>
+            <DropdownMenuItem
+              onClick={handleSignOut}
+              className="cursor-pointer"
+            >
               Sign out
             </DropdownMenuItem>
           </DropdownMenuContent>
