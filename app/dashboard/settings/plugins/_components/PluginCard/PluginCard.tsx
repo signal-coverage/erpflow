@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 import type { PluginManifest } from "@/core/plugins/types";
 import type { PluginRegistryEntry } from "@/core/plugins/types";
 import {
@@ -21,11 +22,14 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
 
   async function handleAction(
     action: () => Promise<{ success: boolean; error?: string }>,
+    successMessage: string,
   ) {
     setLoading(true);
     const result = await action();
     if (!result.success) {
-      console.error(result.error);
+      toast.error(result.error ?? "Action failed");
+    } else {
+      toast.success(successMessage);
     }
     onRefresh();
     setLoading(false);
@@ -70,7 +74,7 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
         {!isInstalled && (
           <button
             disabled={loading}
-            onClick={() => handleAction(() => installPlugin(manifest.id))}
+            onClick={() => handleAction(() => installPlugin(manifest.id), `${manifest.name} installed`)}
             className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
           >
             Install
@@ -79,7 +83,7 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
         {isInstalled && !isEnabled && (
           <button
             disabled={loading}
-            onClick={() => handleAction(() => enablePlugin(manifest.id))}
+            onClick={() => handleAction(() => enablePlugin(manifest.id), `${manifest.name} enabled`)}
             className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
           >
             Enable
@@ -88,7 +92,7 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
         {isInstalled && isEnabled && (
           <button
             disabled={loading}
-            onClick={() => handleAction(() => disablePlugin(manifest.id))}
+            onClick={() => handleAction(() => disablePlugin(manifest.id), `${manifest.name} disabled`)}
             className="rounded-md border px-3 py-1.5 text-xs font-medium hover:bg-muted disabled:opacity-50"
           >
             Disable
@@ -97,7 +101,7 @@ export function PluginCard({ manifest, entry, onRefresh }: PluginCardProps) {
         {isInstalled && (
           <button
             disabled={loading}
-            onClick={() => handleAction(() => uninstallPlugin(manifest.id))}
+            onClick={() => handleAction(() => uninstallPlugin(manifest.id), `${manifest.name} uninstalled`)}
             className="rounded-md border border-destructive px-3 py-1.5 text-xs font-medium text-destructive hover:bg-destructive/10 disabled:opacity-50"
           >
             Uninstall
